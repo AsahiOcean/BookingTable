@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     @IBAction func ChooseTable(_ sender: Any) {
         if SwitchСondition.isOn {
             UIView.animate(withDuration: 0.5) {
-                self.PlacePreview.alpha = 0
+//                self.PlacePreview.alpha = 0
+//                self.BookingStack.alpha = 1
             }
         } else {
             UIView.animate(withDuration: 0.5) {
