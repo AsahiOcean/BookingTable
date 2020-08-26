@@ -1,4 +1,1 @@
-# BookingTable
-Приложение для бронирования стола | Table reservation application
-
-![alt](https://github.com/AsahiOcean/BookingTable/blob/master/example.gif)
+![](https://media.giphy.com/media/LNxRGiDcQ5dU5H0rFs/source.gif)
