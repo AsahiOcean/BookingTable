@@ -26,11 +26,10 @@ class Loader {
             if let locations = json[categories] as? [[String: AnyObject]] {
                 for location in locations {
                     if let stringArray = location as? [String:Any] {
-                        print(stringArray)
-                    
+                        
                     }
                     else {
-                    
+                        
                     }
                 }
             }
@@ -41,7 +40,7 @@ class Loader {
             for categories in estCategories.eatingEstablishments {
                 for subcategory in categories.coffeeHouses {
                     for item in subcategory.coffeeHouse1 {
-//                        dump(item)
+                        dump(item)
                     }
                 }
             }
