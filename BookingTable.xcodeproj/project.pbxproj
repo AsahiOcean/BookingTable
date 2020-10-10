@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8E73F252EE57D0025FBAD /* ViewController.swift */; };
+		3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40718252F666000198269 /* СircleСlockwise.swift */; };
+		3DD40732252FA5F000198269 /* Publicplaces.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4072C252FA57300198269 /* Publicplaces.json */; };
+		3DD40736252FA62400198269 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40735252FA62400198269 /* Loader.swift */; };
+		3DFC22592530B7E200105928 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC22582530B7E200105928 /* JsonDecoder.swift */; };
 		FA07A80C246BF61500D2830C /* PlacePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07A80B246BF61500D2830C /* PlacePreviewVC.swift */; };
 		FA07A80F246C160C00D2830C /* TablesContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07A80E246C160C00D2830C /* TablesContainerVC.swift */; };
 		FA1E0A9B246AA35900B0852D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E0A9A246AA35900B0852D /* AppDelegate.swift */; };
 		FA1E0A9D246AA35900B0852D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E0A9C246AA35900B0852D /* SceneDelegate.swift */; };
-		FA1E0A9F246AA35900B0852D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E0A9E246AA35900B0852D /* ViewController.swift */; };
+		FA1E0A9F246AA35900B0852D /* ViewController_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E0A9E246AA35900B0852D /* ViewController_OLD.swift */; };
 		FA1E0AA2246AA35900B0852D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1E0AA0246AA35900B0852D /* Main.storyboard */; };
 		FA1E0AA4246AA35B00B0852D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1E0AA3246AA35B00B0852D /* Assets.xcassets */; };
 		FA1E0AA7246AA35B00B0852D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1E0AA5246AA35B00B0852D /* LaunchScreen.storyboard */; };
@@ -19,12 +24,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DA8E73F252EE57D0025FBAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DD40718252F666000198269 /* СircleСlockwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СircleСlockwise.swift"; sourceTree = "<group>"; };
+		3DD4072C252FA57300198269 /* Publicplaces.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Publicplaces.json; sourceTree = "<group>"; };
+		3DD40735252FA62400198269 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		3DFC22582530B7E200105928 /* JsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
 		FA07A80B246BF61500D2830C /* PlacePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePreviewVC.swift; sourceTree = "<group>"; };
 		FA07A80E246C160C00D2830C /* TablesContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesContainerVC.swift; sourceTree = "<group>"; };
 		FA1E0A97246AA35900B0852D /* BookingTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookingTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1E0A9A246AA35900B0852D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1E0A9C246AA35900B0852D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA1E0A9E246AA35900B0852D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA1E0A9E246AA35900B0852D /* ViewController_OLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_OLD.swift; sourceTree = "<group>"; };
 		FA1E0AA1246AA35900B0852D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA1E0AA3246AA35B00B0852D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1E0AA6246AA35B00B0852D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +53,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DD40713252F65BC00198269 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E0AA5246AA35B00B0852D /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		3DD40717252F660500198269 /* Progress Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				3DD40718252F666000198269 /* СircleСlockwise.swift */,
+			);
+			path = "Progress Indicators";
+			sourceTree = "<group>";
+		};
+		3DD4071F252F688600198269 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E0AA0246AA35900B0852D /* Main.storyboard */,
+				3DD40713252F65BC00198269 /* LaunchScreen */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3DD4072F252FA57700198269 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC22302530B40100105928 /* JSONDecoder */,
+				3DD40734252FA61800198269 /* Loader */,
+				3DD4072C252FA57300198269 /* Publicplaces.json */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3DD40734252FA61800198269 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				3DD40735252FA62400198269 /* Loader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		3DFC22302530B40100105928 /* JSONDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC22582530B7E200105928 /* JsonDecoder.swift */,
+			);
+			path = JSONDecoder;
+			sourceTree = "<group>";
+		};
 		FA1E0A8E246AA35900B0852D = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +123,16 @@
 		FA1E0A99246AA35900B0852D /* BookingTable */ = {
 			isa = PBXGroup;
 			children = (
+				3DD4071F252F688600198269 /* Storyboards */,
 				FA1E0AAE246AC05000B0852D /* Helpers */,
 				FA1E0A9A246AA35900B0852D /* AppDelegate.swift */,
 				FA1E0A9C246AA35900B0852D /* SceneDelegate.swift */,
-				FA1E0A9E246AA35900B0852D /* ViewController.swift */,
-				FA1E0AA0246AA35900B0852D /* Main.storyboard */,
+				FA1E0A9E246AA35900B0852D /* ViewController_OLD.swift */,
 				FA1E0AA3246AA35B00B0852D /* Assets.xcassets */,
-				FA1E0AA5246AA35B00B0852D /* LaunchScreen.storyboard */,
 				FA1E0AA8246AA35B00B0852D /* Info.plist */,
 				FA07A80B246BF61500D2830C /* PlacePreviewVC.swift */,
 				FA07A80E246C160C00D2830C /* TablesContainerVC.swift */,
+				3DA8E73F252EE57D0025FBAD /* ViewController.swift */,
 			);
 			path = BookingTable;
 			sourceTree = "<group>";
@@ -79,6 +140,8 @@
 		FA1E0AAE246AC05000B0852D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3DD4072F252FA57700198269 /* API */,
+				3DD40717252F660500198269 /* Progress Indicators */,
 				FA1E0AAF246AC06A00B0852D /* DateCompStr.swift */,
 			);
 			path = Helpers;
@@ -142,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD40732252FA5F000198269 /* Publicplaces.json in Resources */,
 				FA1E0AA7246AA35B00B0852D /* LaunchScreen.storyboard in Resources */,
 				FA1E0AA4246AA35B00B0852D /* Assets.xcassets in Resources */,
 				FA1E0AA2246AA35900B0852D /* Main.storyboard in Resources */,
@@ -156,11 +220,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1E0AB0246AC06A00B0852D /* DateCompStr.swift in Sources */,
-				FA1E0A9F246AA35900B0852D /* ViewController.swift in Sources */,
+				FA1E0A9F246AA35900B0852D /* ViewController_OLD.swift in Sources */,
+				3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */,
 				FA07A80C246BF61500D2830C /* PlacePreviewVC.swift in Sources */,
 				FA07A80F246C160C00D2830C /* TablesContainerVC.swift in Sources */,
+				3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */,
+				3DFC22592530B7E200105928 /* JsonDecoder.swift in Sources */,
 				FA1E0A9B246AA35900B0852D /* AppDelegate.swift in Sources */,
 				FA1E0A9D246AA35900B0852D /* SceneDelegate.swift in Sources */,
+				3DD40736252FA62400198269 /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = KXDT64LHVB;
 				INFOPLIST_FILE = BookingTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -328,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = KXDT64LHVB;
 				INFOPLIST_FILE = BookingTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
