@@ -26,7 +26,7 @@ class Loader {
             if let locations = json[categories] as? [[String: AnyObject]] {
                 for location in locations {
                     if let stringArray = location as? [String:Any] {
-                        
+                        print(stringArray)
                     }
                     else {
                         
