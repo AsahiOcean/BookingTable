@@ -2,11 +2,7 @@ import Foundation
 
 class Loader {
     
-    var Est: [EstInformation] = [] {
-        didSet {
-            print(Est.map({$0.title}))
-        }
-    }
+    var Est: [EstInformation] = []
     
     private func decoder(data: Data) {
         let decoder = JSONDecoder()
