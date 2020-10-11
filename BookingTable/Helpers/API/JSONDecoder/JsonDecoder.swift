@@ -5,7 +5,8 @@ import Foundation
 typealias Codable = Encodable & Decodable
 
 // MARK: - EstCatefories
-struct EstCategories: Codable {
+public struct EstCategories: Codable {
+    
     let eatingEstablishments: [EatingEstablishment]
     let leisureEstablishments: [LeisureEstablishment]
 
@@ -16,7 +17,7 @@ struct EstCategories: Codable {
 }
 
 // MARK: - EatingEstablishment
-struct EatingEstablishment: Codable {
+public struct EatingEstablishment: Codable {
     let eatingEstablishmentDescription: String
     let foodMarkets: [FoodMarket]
     let coffeeHouses: [CoffeeHouse]
@@ -29,7 +30,7 @@ struct EatingEstablishment: Codable {
 }
 
 // MARK: - CoffeeHouse
-struct CoffeeHouse: Codable {
+public struct CoffeeHouse: Codable {
     let coffeeHouseDescription: String
     let coffeeHouse1, coffeeHouse2, coffeeHouse3: [EstInformation]
 
@@ -42,7 +43,7 @@ struct CoffeeHouse: Codable {
 }
 
 // MARK: - CoffeeHouse1
-struct EstInformation: Codable {
+public struct EstInformation: Codable {
     let title: Title
     let subtitle: Subtitle
     let coffeeHouse1_Description: Description
@@ -74,7 +75,7 @@ enum Description: String, Codable {
 }
 
 // MARK: - Image
-struct Image: Codable {
+public struct Image: Codable {
     let logo: String
     let image1, image2, image3, image4: String
     let image5: String
@@ -98,7 +99,7 @@ enum Title: String, Codable {
 }
 
 // MARK: - WayOfCommunication
-struct WayOfCommunication: Codable {
+public struct WayOfCommunication: Codable {
     let workPhone: WorkPhone
     let mobilePhone: MobilePhone
     let telegram: Bool
@@ -117,7 +118,7 @@ enum MobilePhone: String, Codable {
 }
 
 // MARK: - URLElement
-struct URLElement: Codable {
+public struct URLElement: Codable {
     let site: String
 
     enum CodingKeys: String, CodingKey {
@@ -130,7 +131,7 @@ enum WorkPhone: String, Codable {
 }
 
 // MARK: - WorkingDay
-struct WorkingDay: Codable {
+public struct WorkingDay: Codable {
     let monday, tuesday, wednesday, thursday: [Day]
     let friday, saturday, sunday: [Day]
 
@@ -146,7 +147,7 @@ struct WorkingDay: Codable {
 }
 
 // MARK: - Day
-struct Day: Codable {
+public struct Day: Codable {
     let dayOff: Bool
     let openingTime: OpeningTime
     let closingTime: ClosingTime
@@ -174,7 +175,7 @@ enum OpeningTime: String, Codable {
 }
 
 // MARK: - FoodMarket
-struct FoodMarket: Codable {
+public struct FoodMarket: Codable {
     let foodMarketDescription: String
     let foodMarket1, foodMarket2, foodMarket3: [EstInformation]
     
@@ -187,7 +188,7 @@ struct FoodMarket: Codable {
 }
 
 // MARK: - LeisureEstablishment
-struct LeisureEstablishment: Codable {
+public struct LeisureEstablishment: Codable {
     let leisureEstablishmentDescription: String
     let hookahPlaces: [HookahPlace]
     let nightClubs: [NightClub]
@@ -200,7 +201,7 @@ struct LeisureEstablishment: Codable {
 }
 
 // MARK: - HookahPlace
-struct HookahPlace: Codable {
+public struct HookahPlace: Codable {
     let hookahPlaceDescription: String
     let hookahPlace1, hookahPlace2, hookahPlace3: [EstInformation]
 
@@ -213,7 +214,7 @@ struct HookahPlace: Codable {
 }
 
 // MARK: - NightClub
-struct NightClub: Codable {
+public struct NightClub: Codable {
     let nightClubDescription: String
     let nightClub1, nightClub2, nightClub3: [EstInformation]
 
@@ -224,7 +225,3 @@ struct NightClub: Codable {
         case nightClub3 = "Night club 3"
     }
 }
-
-// ---------------------
-
-
