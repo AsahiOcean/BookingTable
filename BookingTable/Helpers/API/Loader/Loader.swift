@@ -2,9 +2,9 @@ import Foundation
 
 class Loader {
     
-    var est: Array<EstCategories> = [] {
+    var estab: Array<CategoriesEst> = [] {
         didSet {
-            print(est.count)
+            print(estab.count)
         }
     }
     
@@ -22,18 +22,20 @@ class Loader {
         return encoder
     }()
     
-    private func getJSON(from data: Data) {
+    private func getJSON(from jsonData: Data) {
         do {
-            if let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as? [String:AnyObject] {
-                if let jsonData = try? JSONSerialization.data(withJSONObject: jsonResult, options: .prettyPrinted) {
-                    print("JSON: \(jsonData.count)")
+            if let jsonResult = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? [String:Any] {
+
+                print(jsonResult.count)
+
+                for value in jsonResult {
+                    
                 }
             }
-        } catch let error as NSError {
-            print("[🛑] \(type(of: self)).getJSON: \(error.localizedDescription)")
+        } catch {
+            print("[🔴] getJSON: \(error.localizedDescription)")
         }
-
-        
+                
         OperationQueue.main.addOperation({
             
         })
@@ -95,7 +97,7 @@ class Loader {
                                     }
                                 }
                             case let x where (x.hasPrefix("file") == true):
-                                print("[✅] FILE SIZE: \(data.count)")
+                                print("[✅] FILE: SIZE \(data.count)")
                                 try? completion(data)
                             default: break
                         }
@@ -115,7 +117,7 @@ class Loader {
         
     init() {
         self.loadData(from: testJSON.absoluteString, completion: { data in
-            self.getJSON(from: data)
+            try self.getJSON(from: data)
         })
     }
 }
