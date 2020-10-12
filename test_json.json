@@ -3,8 +3,7 @@
   "Eating establishments":
     {
       "description": "Eating establishments: description",
-      "Food Markets": [
-        {
+      "Food Markets": {
           "description": "Food Markets: description text",
           "Food Market 1": [
             {
@@ -261,10 +260,8 @@
               ]
             }
           ]
-        }
-      ],
-      "Coffee Houses": [
-        {
+        },
+      "Coffee Houses": {
           "description": "Coffee Houses: description text",
           "Coffee house 1": [
             {
@@ -522,13 +519,11 @@
             }
           ]
         }
-      ]
     },
   "Leisure establishments":
     {
       "description": "Leisure establishments: description text",
-      "Hookah Places": [
-        {
+      "Hookah Places": {
           "description": "Hookah Places: description text",
           "Hookah Place 1": [
             {
@@ -785,10 +780,8 @@
               ]
             }
           ]
-        }
-      ],
-      "Night clubs": [
-        {
+        },
+      "Night clubs": {
           "description": "Night clubs: description text",
           "Night club 1": [
             {
@@ -1046,6 +1039,5 @@
             }
           ]
         }
-      ]
     }
 }
