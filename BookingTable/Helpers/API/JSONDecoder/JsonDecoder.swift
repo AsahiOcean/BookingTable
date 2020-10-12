@@ -19,7 +19,7 @@ struct Establishments: Codable {
 struct EatingEstablishments: Codable {
     let eatingEstablishmentsDescription: String?
     let foodMarkets: [FoodMarket]?
-    let coffeeHouses: [CoffeeHouse]?
+    let coffeeHouses: [CoffeeHouses]?
 
     enum CodingKeys: String, CodingKey {
         case eatingEstablishmentsDescription = "description"
@@ -29,7 +29,7 @@ struct EatingEstablishments: Codable {
 }
 
 // MARK: - CoffeeHouse
-struct CoffeeHouse: Codable {
+struct CoffeeHouses: Codable {
     let coffeeHouseDescription: String?
     let coffeeHouse1, coffeeHouse2, coffeeHouse3: [AboutEst]?
 
