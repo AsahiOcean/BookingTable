@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */; };
 		3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8E73F252EE57D0025FBAD /* ViewController.swift */; };
 		3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40718252F666000198269 /* СircleСlockwise.swift */; };
 		3DD40732252FA5F000198269 /* Publicplaces.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4072C252FA57300198269 /* Publicplaces.json */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderEncoder.swift; sourceTree = "<group>"; };
 		3DA8E73F252EE57D0025FBAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DD40718252F666000198269 /* СircleСlockwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СircleСlockwise.swift"; sourceTree = "<group>"; };
 		3DD4072C252FA57300198269 /* Publicplaces.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Publicplaces.json; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				3DFC22582530B7E200105928 /* JsonDecoder.swift */,
+				3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */,
 			);
 			path = JSONDecoder;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				FA1E0A9F246AA35900B0852D /* ViewController_OLD.swift in Sources */,
 				3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */,
 				FA07A80C246BF61500D2830C /* PlacePreviewVC.swift in Sources */,
+				3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */,
 				FA07A80F246C160C00D2830C /* TablesContainerVC.swift in Sources */,
 				3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */,
 				3DFC22592530B7E200105928 /* JsonDecoder.swift in Sources */,

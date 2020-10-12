@@ -1,54 +1,37 @@
-//   let estCatefories = try? newJSONDecoder().decode(CategoriesEst.self, from: jsonData)
+//   let establishments = try? newJSONDecoder().decode(Establishments.self, from: jsonData)
 
 import Foundation
 
-typealias Codable = Encodable & Decodable
-
-struct CategoriesEst: Codable {
-
-    let eating: [Establishments]
-    let leisure: [Establishments]
-
-    private enum CodingKeys: String, CodingKey {
-        case Eatingestablishments = "Eating establishments"
-        case Leisureestablishments = "Leisure establishments"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        eating = try values.decode([Establishments].self, forKey: .Eatingestablishments)
-        leisure = try values.decode([Establishments].self, forKey: .Leisureestablishments)
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(eating, forKey: .Eatingestablishments)
-        try container.encode(leisure, forKey: .Leisureestablishments)
-    }
-
-}
-// MARK: - LeisureEstablishment
-public struct Establishments: Codable {
-    let description: String
-    let hookahPlaces: [HookahPlace]
-    let nightClubs: [NightClub]
-    let foodMarkets: [FoodMarket]
-    let coffeeHouses: [CoffeeHouse]
+// MARK: - Establishments
+struct Establishments: Codable {
+    let establishmentsDescription: String?
+    let eatingEstablishments: EatingEstablishments?
+    let leisureEstablishments: LeisureEstablishments?
 
     enum CodingKeys: String, CodingKey {
-        case description = "description"
-        case foodMarkets = "Food Markets"
-        case coffeeHouses = "Coffee Houses"
-        case hookahPlaces = "Hookah Places"
-        case nightClubs = "Night clubs"
+        case establishmentsDescription = "description"
+        case eatingEstablishments = "Eating establishments"
+        case leisureEstablishments = "Leisure establishments"
     }
 }
 
+// MARK: - EatingEstablishments
+struct EatingEstablishments: Codable {
+    let eatingEstablishmentsDescription: String?
+    let foodMarkets: [FoodMarket]?
+    let coffeeHouses: [CoffeeHouse]?
+
+    enum CodingKeys: String, CodingKey {
+        case eatingEstablishmentsDescription = "description"
+        case foodMarkets = "Food Markets"
+        case coffeeHouses = "Coffee Houses"
+    }
+}
 
 // MARK: - CoffeeHouse
-public struct CoffeeHouse: Codable {
-    let coffeeHouseDescription: String
-    let coffeeHouse1, coffeeHouse2, coffeeHouse3: [EstInformation]
+struct CoffeeHouse: Codable {
+    let coffeeHouseDescription: String?
+    let coffeeHouse1, coffeeHouse2, coffeeHouse3: [AboutEst]?
 
     enum CodingKeys: String, CodingKey {
         case coffeeHouseDescription = "description"
@@ -59,15 +42,13 @@ public struct CoffeeHouse: Codable {
 }
 
 // MARK: - CoffeeHouse1
-public struct EstInformation: Codable {
-    let title: Title
-    let subtitle: Subtitle
-    let coffeeHouse1_Description: Description
-    let images: [Image]
-    let wayOfCommunication: [WayOfCommunication]
-    let address: Address
-    let onlyAdults, foodCourt: Bool
-    let workingDays: [WorkingDay]
+struct AboutEst: Codable {
+    let title, subtitle, coffeeHouse1_Description: String?
+    let images: [Image]?
+    let wayOfCommunication: [WayOfCommunication]?
+    let address: String?
+    let onlyAdults, foodCourt: Bool?
+    let workingDays: [WorkingDay]?
 
     enum CodingKeys: String, CodingKey {
         case title = "Title"
@@ -82,19 +63,11 @@ public struct EstInformation: Codable {
     }
 }
 
-enum Address: String, Codable {
-    case object1Address = "object1-address"
-}
-
-enum Description: String, Codable {
-    case descriptionText = "description text"
-}
-
 // MARK: - Image
-public struct Image: Codable {
-    let logo: String
-    let image1, image2, image3, image4: String
-    let image5: String
+struct Image: Codable {
+    let logo: String?
+    let image1, image2, image3, image4: String?
+    let image5: String?
 
     enum CodingKeys: String, CodingKey {
         case logo = "Logo"
@@ -106,20 +79,12 @@ public struct Image: Codable {
     }
 }
 
-enum Subtitle: String, Codable {
-    case subtitle = "subtitle"
-}
-
-enum Title: String, Codable {
-    case title = "title"
-}
-
 // MARK: - WayOfCommunication
-public struct WayOfCommunication: Codable {
-    let workPhone: WorkPhone
-    let mobilePhone: MobilePhone
-    let telegram: Bool
-    let urLs: [URLElement]
+struct WayOfCommunication: Codable {
+    let workPhone: WorkPhone?
+    let mobilePhone: MobilePhone?
+    let telegram: Bool?
+    let urLs: [URLElement]?
 
     enum CodingKeys: String, CodingKey {
         case workPhone = "Work phone"
@@ -134,8 +99,8 @@ enum MobilePhone: String, Codable {
 }
 
 // MARK: - URLElement
-public struct URLElement: Codable {
-    let site: String
+struct URLElement: Codable {
+    let site: String?
 
     enum CodingKeys: String, CodingKey {
         case site = "Site"
@@ -147,9 +112,9 @@ enum WorkPhone: String, Codable {
 }
 
 // MARK: - WorkingDay
-public struct WorkingDay: Codable {
-    let monday, tuesday, wednesday, thursday: [Day]
-    let friday, saturday, sunday: [Day]
+struct WorkingDay: Codable {
+    let monday, tuesday, wednesday, thursday: [Day]?
+    let friday, saturday, sunday: [Day]?
 
     enum CodingKeys: String, CodingKey {
         case monday = "Monday"
@@ -163,10 +128,10 @@ public struct WorkingDay: Codable {
 }
 
 // MARK: - Day
-public struct Day: Codable {
-    let dayOff: Bool
-    let openingTime: OpeningTime
-    let closingTime: ClosingTime
+struct Day: Codable {
+    let dayOff: Bool?
+    let openingTime: OpeningTime?
+    let closingTime: ClosingTime?
 
     enum CodingKeys: String, CodingKey {
         case dayOff = "Day-off"
@@ -191,10 +156,10 @@ enum OpeningTime: String, Codable {
 }
 
 // MARK: - FoodMarket
-public struct FoodMarket: Codable {
-    let foodMarketDescription: String
-    let foodMarket1, foodMarket2, foodMarket3: [EstInformation]
-    
+struct FoodMarket: Codable {
+    let foodMarketDescription: String?
+    let foodMarket1, foodMarket2, foodMarket3: [AboutEst]?
+
     enum CodingKeys: String, CodingKey {
         case foodMarketDescription = "description"
         case foodMarket1 = "Food Market 1"
@@ -203,10 +168,23 @@ public struct FoodMarket: Codable {
     }
 }
 
+// MARK: - LeisureEstablishments
+struct LeisureEstablishments: Codable {
+    let leisureEstablishmentsDescription: String?
+    let hookahPlaces: [HookahPlace]?
+    let nightClubs: [NightClub]?
+
+    enum CodingKeys: String, CodingKey {
+        case leisureEstablishmentsDescription = "description"
+        case hookahPlaces = "Hookah Places"
+        case nightClubs = "Night clubs"
+    }
+}
+
 // MARK: - HookahPlace
-public struct HookahPlace: Codable {
-    let hookahPlaceDescription: String
-    let hookahPlace1, hookahPlace2, hookahPlace3: [EstInformation]
+struct HookahPlace: Codable {
+    let hookahPlaceDescription: String?
+    let hookahPlace1, hookahPlace2, hookahPlace3: [AboutEst]?
 
     enum CodingKeys: String, CodingKey {
         case hookahPlaceDescription = "description"
@@ -217,9 +195,9 @@ public struct HookahPlace: Codable {
 }
 
 // MARK: - NightClub
-public struct NightClub: Codable {
-    let nightClubDescription: String
-    let nightClub1, nightClub2, nightClub3: [EstInformation]
+struct NightClub: Codable {
+    let nightClubDescription: String?
+    let nightClub1, nightClub2, nightClub3: [AboutEst]?
 
     enum CodingKeys: String, CodingKey {
         case nightClubDescription = "description"

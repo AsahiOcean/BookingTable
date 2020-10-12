@@ -1,7 +1,8 @@
 {
+  "description": "General description text",
   "Eating establishments": [
     {
-      "description": "Eating establishments: description text",
+      "description": "Eating establishments: description",
       "Food Markets": [
         {
           "description": "Food Markets: description text",
