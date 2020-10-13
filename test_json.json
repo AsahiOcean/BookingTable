@@ -1,0 +1,1044 @@
+{
+  "description": "General description text",
+  "test_bool": true,
+  "Eating establishments":
+    {
+      "description": "Eating establishments: description",
+      "Food Markets": {
+          "description": "Food Markets: description text",
+          "Food Market 1": [
+            {
+              "Title": "Food Market 1: title",
+              "Subtitle": "Food Market 1: subtitle",
+              "Description": "Food Market 1: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Food Market 1: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Food Market 2": [
+            {
+              "Title": "Food Market 2: title",
+              "Subtitle": "Food Market 2: subtitle",
+              "Description": "Food Market 2: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Food Market 2: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Food Market 3": [
+            {
+              "Title": "Food Market 3: title",
+              "Subtitle": "Food Market 3: subtitle",
+              "Description": "Food Market 3: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Food Market 3: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+      "Coffee Houses": {
+          "description": "Coffee Houses: description text",
+          "Coffee house 1": [
+            {
+              "Title": "Coffee house 1: title",
+              "Subtitle": "Coffee house 1: subtitle",
+              "Description": "Coffee house 1: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Coffee house 1: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Coffee house 2": [
+            {
+              "Title": "Coffee house 2: title",
+              "Subtitle": "Coffee house 2: subtitle",
+              "Description": "Coffee house 2: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Coffee house 2: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Coffee house 3": [
+            {
+              "Title": "Coffee house 3: title",
+              "Subtitle": "Coffee house 3: subtitle",
+              "Description": "Coffee house 3: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Coffee house 3: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+    },
+  "Leisure establishments":
+    {
+      "description": "Leisure establishments: description text",
+      "Hookah Places": {
+          "description": "Hookah Places: description text",
+          "Hookah Place 1": [
+            {
+              "Title": "Hookah Place 1: title",
+              "Subtitle": "Hookah Place 1: subtitle",
+              "Description": "Hookah Place 1: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Hookah Place 1: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Hookah Place 2": [
+            {
+              "Title": "Hookah Place 2: title",
+              "Subtitle": "Hookah Place 2: subtitle",
+              "Description": "Hookah Place 2: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Hookah Place 2: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Hookah Place 3": [
+            {
+              "Title": "Hookah Place 3: title",
+              "Subtitle": "Hookah Place 3: subtitle",
+              "Description": "Hookah Place 3: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Hookah Place 3: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+      "Night clubs": {
+          "description": "Night clubs: description text",
+          "Night club 1": [
+            {
+              "Title": "Night club 1: title",
+              "Subtitle": "Night club 1: subtitle",
+              "Description": "Night club 1: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Night club 1: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Night club 2": [
+            {
+              "Title": "Night club 2: title",
+              "Subtitle": "Night club 2: subtitle",
+              "Description": "Night club 2: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Night club 2: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Night club 3": [
+            {
+              "Title": "Night club 3: title",
+              "Subtitle": "Night club 3: subtitle",
+              "Description": "Night club 3: description text",
+              "Images": [
+                {
+                  "Logo": "https://fakeimg.pl/500/?retina=1&text=this.Title&font=monaco",
+                  "Image-1": "http://placeimg.com/1920/1080/any",
+                  "Image-2": "http://placeimg.com/1920/1080/any",
+                  "Image-3": "http://placeimg.com/1920/1080/any",
+                  "Image-4": "http://placeimg.com/1920/1080/any",
+                  "Image-5": "http://placeimg.com/1920/1080/any"
+                }
+              ],
+              "Way of communication": [
+                {
+                  "Work phone": "+1-111-111-11-11",
+                  "Mobile phone": "+2-222-222-22-22",
+                  "Telegram": true,
+                  "URLs": [
+                    {
+                      "Site": "https://example.com"
+                    }
+                  ]
+                }
+              ],
+              "Address": "Night club 3: address",
+              "Only adults": false,
+              "Food court": false,
+              "Working days": [
+                {
+                  "Monday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Tuesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "8:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Wednesday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "22:00"
+                    }
+                  ],
+                  "Thursday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "9:00",
+                      "Closing time": "21:00"
+                    }
+                  ],
+                  "Friday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "00:00"
+                    }
+                  ],
+                  "Saturday": [
+                    {
+                      "Day-off": false,
+                      "Opening time": "10:00",
+                      "Closing time": "02:00"
+                    }
+                  ],
+                  "Sunday": [
+                    {
+                      "Day-off": true,
+                      "Opening time": "",
+                      "Closing time": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+    }
+}
