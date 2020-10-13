@@ -1,6 +1,6 @@
 {
   "description": "Top-level: description text",
-  "test_bool": true,
+  "top-level_bool": true,
   "Eating establishments":
     {
       "description": "Eating Est: description",
