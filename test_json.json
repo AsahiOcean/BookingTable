@@ -1,9 +1,9 @@
 {
-  "description": "General description text",
+  "description": "Top-level: description text",
   "test_bool": true,
   "Eating establishments":
     {
-      "description": "Eating establishments: description",
+      "description": "Eating Est: description",
       "Food Markets": {
           "description": "Food Markets: description text",
           "Food Market 1": [
