@@ -1,8 +1,8 @@
 {
   "description": "General description text",
+  "test_bool": true,
   "Eating establishments":
     {
-      "test_bool": true,
       "description": "Eating establishments: description",
       "Food Markets": {
           "description": "Food Markets: description text",
