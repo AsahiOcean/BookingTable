@@ -22,33 +22,28 @@ final class JSONDecoderEncoder: JSON_Data_Delegate {
         return encoder
     }()
     
-    var testEst: [Establishments] = [] {
+    var testEst: Establishments = Establishments() {
         didSet {
-            print(testEst.count)
+            print(testEst)
         }
     }
     
     func reception(data: Data) {
         do {
-            //let json = try self.decoder.decode(Establishments.self, from: data)
-            let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:AnyObject]
-                switch jsonData {
-                    case let json as NSDictionary:
-                        for (key,value) in json {
-                            switch (key,value) {
-                                case (let key as String, let valueDict as Dictionary<String, AnyObject>):
-                                    print("\(key): \(valueDict.keys)")
-                                case (let key as String, let valueStr as String):
-                                    print("\(key): \(valueStr)")
-                                case (let key as String, let value as AnyObject):
-                                    print("\(key): \(type(of: value))")
-                            default:
-                                print("[🔴] switch (key,value): Unknown format")
-                            }
-                        }
+            if let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any> {
+                for (key,value) in json {
+                    switch (key,value) {
+                        case (let key, let valueDict as Dictionary<String, AnyObject>):
+                            print("\(key): \(valueDict.keys)")
+                        case (let key, let valueStr as String):
+                            print("\(key): \(valueStr)")
+                        case (let key, let value as AnyObject):
+                            print("\(key): \(type(of: value))")
                     default:
-                        print("switch jsonData: ERROR")
+                        print("[🔴] switch (key,value): Unknown format")
+                    }
                 }
+            }
         } catch let error {
             print(error.localizedDescription)
         }

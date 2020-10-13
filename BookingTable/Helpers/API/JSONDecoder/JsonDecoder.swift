@@ -2,18 +2,47 @@
 
 import Foundation
 
-// MARK: - Establishments
-struct Establishments: Codable {
-    let descriptionEst: String?
-    let eatingEst: EatingEst?
-    let leisureEst: LeisureEst?
-
-    enum CodingKeys: String, CodingKey {
-        case descriptionEst = "description"
-        case eatingEst = "Eating establishments"
-        case leisureEst = "Leisure establishments"
+public struct Establishments: Codable {
+    
+    struct AboutEst: Codable {
+        let title, subtitle, description: String?
+        let images: [Image]?
+        let wayOfCommunication: [WayOfCommunication]?
+        let address: String?
+        let onlyAdults, foodCourt: Bool?
+        let workingDays: [WorkingDay]?
     }
+    
+    struct EatingEsts: Codable {
+        var description: String?
+        var foodMarkets: [AboutEst]?
+        var coffeeHouses: [AboutEst]?
+    }
+    
+    struct LeisureEsts: Codable {
+        var description: String?
+        var hookahPlaces: [AboutEst]?
+        var nightClubs: [AboutEst]?
+    }
+
+    var eatingEst: [EatingEsts]?
+    var leisureEst: [LeisureEsts]?
+    var description: String?
 }
+
+
+// MARK: - Establishments
+//struct Establishments: Codable {
+//    let descriptionEst: String?
+//    let eatingEst: EatingEst?
+//    let leisureEst: LeisureEst?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case descriptionEst = "description"
+//        case eatingEst = "Eating establishments"
+//        case leisureEst = "Leisure establishments"
+//    }
+//}
 
 // MARK: - EatingEstablishments
 struct EatingEst: Codable {
