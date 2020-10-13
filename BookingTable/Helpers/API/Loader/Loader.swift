@@ -6,12 +6,12 @@ protocol JSON_Data_Delegate: class {
 
 final class Loader {
     
+    static let shared = Loader()
+    
     var delegate: JSON_Data_Delegate?
     weak var jsonDecoderEncoder: JSONDecoderEncoder!
     public var url: URL? = URL(string: "https://raw.githubusercontent.com/AsahiOcean/BookingTable/master/test_json.json")
     public fileprivate(set) var statusCode: Int?
-
-    static let shared = Loader()
     
     fileprivate let loadData_backgroundQueue = DispatchQueue(label: "com.loadData.background.queue", qos: .background)
                 

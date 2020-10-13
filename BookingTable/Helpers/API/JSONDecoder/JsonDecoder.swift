@@ -4,22 +4,22 @@ import Foundation
 
 // MARK: - Establishments
 struct Establishments: Codable {
-    let establishmentsDescription: String?
-    let eatingEstablishments: EatingEstablishments?
-    let leisureEstablishments: LeisureEstablishments?
+    let descriptionEst: String?
+    let eatingEst: EatingEst?
+    let leisureEst: LeisureEst?
 
     enum CodingKeys: String, CodingKey {
-        case establishmentsDescription = "description"
-        case eatingEstablishments = "Eating establishments"
-        case leisureEstablishments = "Leisure establishments"
+        case descriptionEst = "description"
+        case eatingEst = "Eating establishments"
+        case leisureEst = "Leisure establishments"
     }
 }
 
 // MARK: - EatingEstablishments
-struct EatingEstablishments: Codable {
+struct EatingEst: Codable {
     let eatingEstablishmentsDescription: String?
-    let foodMarkets: [FoodMarket]?
-    let coffeeHouses: [CoffeeHouses]?
+    let foodMarkets: FoodMarkets?
+    let coffeeHouses: CoffeeHouses?
 
     enum CodingKeys: String, CodingKey {
         case eatingEstablishmentsDescription = "description"
@@ -28,14 +28,14 @@ struct EatingEstablishments: Codable {
     }
 }
 
-// MARK: - CoffeeHouse
+// MARK: - CoffeeHouses
 struct CoffeeHouses: Codable {
-    let coffeeHouseDescription: String?
+    let coffeeHousesDescription: String?
     let coffeeHouse1, coffeeHouse2, coffeeHouse3: [AboutEst]?
 
     enum CodingKeys: String, CodingKey {
-        case coffeeHouseDescription = "description"
-        case coffeeHouse1 = "Coffee house 1"
+        case coffeeHousesDescription = "description"
+        case coffeeHouse1 = "Coffee house"
         case coffeeHouse2 = "Coffee house 2"
         case coffeeHouse3 = "Coffee house 3"
     }
@@ -155,13 +155,13 @@ enum OpeningTime: String, Codable {
     case the900 = "9:00"
 }
 
-// MARK: - FoodMarket
-struct FoodMarket: Codable {
-    let foodMarketDescription: String?
+// MARK: - FoodMarkets
+struct FoodMarkets: Codable {
+    let foodMarketsDescription: String?
     let foodMarket1, foodMarket2, foodMarket3: [AboutEst]?
 
     enum CodingKeys: String, CodingKey {
-        case foodMarketDescription = "description"
+        case foodMarketsDescription = "description"
         case foodMarket1 = "Food Market 1"
         case foodMarket2 = "Food Market 2"
         case foodMarket3 = "Food Market 3"
@@ -169,10 +169,10 @@ struct FoodMarket: Codable {
 }
 
 // MARK: - LeisureEstablishments
-struct LeisureEstablishments: Codable {
+struct LeisureEst: Codable {
     let leisureEstablishmentsDescription: String?
-    let hookahPlaces: [HookahPlace]?
-    let nightClubs: [NightClub]?
+    let hookahPlaces: HookahPlaces?
+    let nightClubs: NightClubs?
 
     enum CodingKeys: String, CodingKey {
         case leisureEstablishmentsDescription = "description"
@@ -181,26 +181,26 @@ struct LeisureEstablishments: Codable {
     }
 }
 
-// MARK: - HookahPlace
-struct HookahPlace: Codable {
-    let hookahPlaceDescription: String?
+// MARK: - HookahPlaces
+struct HookahPlaces: Codable {
+    let hookahPlacesDescription: String?
     let hookahPlace1, hookahPlace2, hookahPlace3: [AboutEst]?
 
     enum CodingKeys: String, CodingKey {
-        case hookahPlaceDescription = "description"
+        case hookahPlacesDescription = "description"
         case hookahPlace1 = "Hookah Place 1"
         case hookahPlace2 = "Hookah Place 2"
         case hookahPlace3 = "Hookah Place 3"
     }
 }
 
-// MARK: - NightClub
-struct NightClub: Codable {
-    let nightClubDescription: String?
+// MARK: - NightClubs
+struct NightClubs: Codable {
+    let nightClubsDescription: String?
     let nightClub1, nightClub2, nightClub3: [AboutEst]?
 
     enum CodingKeys: String, CodingKey {
-        case nightClubDescription = "description"
+        case nightClubsDescription = "description"
         case nightClub1 = "Night club 1"
         case nightClub2 = "Night club 2"
         case nightClub3 = "Night club 3"
