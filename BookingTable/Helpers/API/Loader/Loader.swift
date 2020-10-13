@@ -1,7 +1,7 @@
 import Foundation
 
 protocol JSON_Data_Delegate: class {
-    func result(data: Data)
+    func reception(data: Data)
 }
 
 final class Loader {
@@ -33,7 +33,7 @@ final class Loader {
                                             let loadData_backgroundQueue = DispatchQueue(label: "com.jsonDecoderEncoder.queue", qos: .background)
                                             loadData_backgroundQueue.async(execute: {
                                                 self.jsonDecoderEncoder = JSONDecoderEncoder.shared
-                                                self.delegate?.result(data: data)
+                                                self.delegate?.reception(data: data)
                                             })
                                         default: break
                                     }

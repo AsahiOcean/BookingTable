@@ -27,31 +27,26 @@ final class JSONDecoderEncoder: JSON_Data_Delegate {
             print(testEst.count)
         }
     }
-
-    func result(data: Data) {
+    
+    func reception(data: Data) {
         do {
 //            let json = try self.decoder.decode(Establishments.self, from: data)
-//            let object: Any = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
-            
-            let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any]
-            switch jsonData {
-                case let json as NSDictionary:
-                    var keys: [String] = []
-                    var values: [AnyObject] = []
-
-                    let dict = Dictionary(zip(keys, values), uniquingKeysWith: { $1 }) as? Establishments
-
-                    for (key,value) in json {
-                        switch (key,value) {
-                        case (let x as String, let y as EatingEst):
-                            print(y)
-                        default:
-                            break
+            let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:AnyObject]
+                switch jsonData {
+                    case let json as NSDictionary:
+                        for (key,value) in json {
+                            switch (key,value) {
+                                case (let key as String, let valueDict as Dictionary<String, AnyObject>):
+                                    print("\(key): \(valueDict.keys)")
+                                case (let key as String, let valueStr as String):
+                                    print("\(key): \(valueStr)")
+                            default:
+                                print("[🔴] switch (key,value): Unknown format")
+                            }
                         }
-                    }
-                default:
-                    print("ERROR")
-            }
+                    default:
+                        print("switch jsonData: ERROR")
+                }
             //let myData = try self.decoder.decode(Establishments.self, from: jsonData); print(myData)
             
         } catch let error {
