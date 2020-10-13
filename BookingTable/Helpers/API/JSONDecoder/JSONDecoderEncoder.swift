@@ -30,7 +30,7 @@ final class JSONDecoderEncoder: JSON_Data_Delegate {
     
     func reception(data: Data) {
         do {
-//            let json = try self.decoder.decode(Establishments.self, from: data)
+            //let json = try self.decoder.decode(Establishments.self, from: data)
             let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:AnyObject]
                 switch jsonData {
                     case let json as NSDictionary:
@@ -40,6 +40,8 @@ final class JSONDecoderEncoder: JSON_Data_Delegate {
                                     print("\(key): \(valueDict.keys)")
                                 case (let key as String, let valueStr as String):
                                     print("\(key): \(valueStr)")
+                                case (let key as String, let value as AnyObject):
+                                    print("\(key): \(type(of: value))")
                             default:
                                 print("[🔴] switch (key,value): Unknown format")
                             }
@@ -47,8 +49,6 @@ final class JSONDecoderEncoder: JSON_Data_Delegate {
                     default:
                         print("switch jsonData: ERROR")
                 }
-            //let myData = try self.decoder.decode(Establishments.self, from: jsonData); print(myData)
-            
         } catch let error {
             print(error.localizedDescription)
         }
