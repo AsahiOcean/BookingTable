@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A14232536B81F00E38B3E /* HeaderView.swift */; };
+		3D4A14282536B83F00E38B3E /* extensionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */; };
 		3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */; };
 		3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8E73F252EE57D0025FBAD /* ViewController.swift */; };
 		3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40718252F666000198269 /* СircleСlockwise.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D4A14232536B81F00E38B3E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionHeaderView.swift; sourceTree = "<group>"; };
 		3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderEncoder.swift; sourceTree = "<group>"; };
 		3DA8E73F252EE57D0025FBAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DD40718252F666000198269 /* СircleСlockwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СircleСlockwise.swift"; sourceTree = "<group>"; };
@@ -55,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D4A14222536B80700E38B3E /* HeaderMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				3D4A14232536B81F00E38B3E /* HeaderView.swift */,
+				3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */,
+			);
+			path = HeaderMenuView;
+			sourceTree = "<group>";
+		};
 		3DD40713252F65BC00198269 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +139,7 @@
 		FA1E0A99246AA35900B0852D /* BookingTable */ = {
 			isa = PBXGroup;
 			children = (
+				3D4A14222536B80700E38B3E /* HeaderMenuView */,
 				3DD4071F252F688600198269 /* Storyboards */,
 				FA1E0AAE246AC05000B0852D /* Helpers */,
 				FA1E0A9A246AA35900B0852D /* AppDelegate.swift */,
@@ -229,6 +243,8 @@
 				3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */,
 				FA07A80F246C160C00D2830C /* TablesContainerVC.swift in Sources */,
 				3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */,
+				3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */,
+				3D4A14282536B83F00E38B3E /* extensionHeaderView.swift in Sources */,
 				3DFC22592530B7E200105928 /* JsonDecoder.swift in Sources */,
 				FA1E0A9B246AA35900B0852D /* AppDelegate.swift in Sources */,
 				FA1E0A9D246AA35900B0852D /* SceneDelegate.swift in Sources */,
