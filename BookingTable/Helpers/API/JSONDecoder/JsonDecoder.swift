@@ -2,7 +2,11 @@
 
 import Foundation
 
-public struct Establishments: Codable {
+public struct Establishments: Codable, Identifiable {
+    
+    public static func == (lhs: Establishments, rhs: Establishments) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     struct AboutEst: Codable {
         let title, subtitle, description: String?
@@ -23,11 +27,25 @@ public struct Establishments: Codable {
         var description: String?
         var hookahPlaces: [AboutEst]?
         var nightClubs: [AboutEst]?
+        
+        init(_description: String?, _hookahPlaces: [AboutEst]?, _nightClubs: [AboutEst]?) {
+            self.description = _description
+            self.hookahPlaces = _hookahPlaces
+            self.nightClubs = _nightClubs
+        }
     }
-
+    
+    public var id: Int
+    var description: String?
     var eatingEst: [EatingEsts]?
     var leisureEst: [LeisureEsts]?
-    var description: String?
+        
+    init(_id: Int?, _description: String?, _eatingEst: [EatingEsts]?, _leisureEst: [LeisureEsts]?) {
+        self.id = _id ?? Int(Date().timeIntervalSince1970)
+        self.description = _description
+        self.eatingEst = _eatingEst
+        self.leisureEst = _leisureEst
+    }
 }
 
 
