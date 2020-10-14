@@ -2,13 +2,18 @@ import UIKit
 
 extension HeaderView {
     internal func setupView() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.setNeedsDisplay()
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
+        self._frame = self.frame
         
+//        self.translatesAutoresizingMaskIntoConstraints = false
+//        self.setNeedsDisplay()
+//        self.setNeedsLayout()
+//        self.layoutIfNeeded()
+//        self.layer.masksToBounds = true
+        self.clipsToBounds = true // for cornerRadius
         self.mainGradientBackground()
-        
+
+        self.layer.cornerRadius = 4.0
+
     }
     
     internal func mainGradientBackground() {
@@ -24,9 +29,9 @@ extension HeaderView {
             gradient.locations =  [-0.5, 1.5]
             
             let animation = CABasicAnimation(keyPath: "colors")
-            animation.fromValue = [#colorLiteral(red: 0.7529411765, green: 0.6745098039, blue: 0.7803921569, alpha: 1).cgColor, #colorLiteral(red: 0.5176470588, green: 0.4784313725, blue: 0.5803921569, alpha: 1).cgColor]
-            animation.toValue = [#colorLiteral(red: 0.5176470588, green: 0.4784313725, blue: 0.5803921569, alpha: 1).cgColor, #colorLiteral(red: 0.7529411765, green: 0.6745098039, blue: 0.7803921569, alpha: 1).cgColor]
-            animation.duration = 1.0
+            animation.fromValue = [#colorLiteral(red: 0.1254901961, green: 0.3137254902, blue: 0.2117647059, alpha: 1).cgColor, #colorLiteral(red: 0.1254901961, green: 0.2352941176, blue: 0.2117647059, alpha: 1).cgColor]
+            animation.toValue = [#colorLiteral(red: 0.1411764706, green: 0.1960784314, blue: 0.1960784314, alpha: 1).cgColor, #colorLiteral(red: 0.1254901961, green: 0.3137254902, blue: 0.2117647059, alpha: 1).cgColor]
+            animation.duration = 3.0
             animation.autoreverses = true
             animation.repeatCount = .infinity
 
