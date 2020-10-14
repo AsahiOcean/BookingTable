@@ -10,10 +10,25 @@ extension HeaderView {
 //        self.layoutIfNeeded()
 //        self.layer.masksToBounds = true
         self.clipsToBounds = true // for cornerRadius
+        self.layer.cornerRadius = 5.0
+        
         self.mainGradientBackground()
-
-        self.layer.cornerRadius = 4.0
-
+        self.menuButton()
+    }
+    
+    func menuButton() {
+        let button = UIButton()
+        //button.setTitle("Menu", for: .normal)
+                        
+        let icon = UIImage(systemName: "line.horizontal.3", withConfiguration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(#colorLiteral(red: 0.8052493579, green: 0.5360926798, blue: 0, alpha: 1), renderingMode: .alwaysOriginal).scaleX(2)
+        
+        button.setImage(icon, for: .normal)
+                
+        button.layer.bounds.size = CGSize(width: self.bounds.height/2, height: self.bounds.height/2)
+                
+        button.center = CGPoint(x: self.bounds.width/10, y: self.bounds.height - (button.frame.height/1.25))
+        
+        self.addSubview(button)
     }
     
     internal func mainGradientBackground() {

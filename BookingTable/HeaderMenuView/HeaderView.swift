@@ -2,7 +2,6 @@ import UIKit
 
 public class HeaderView: UIView {
     
-    private var menuButton: UIButton!
     internal var _frame: CGRect!
     
     public override init(frame: CGRect) {

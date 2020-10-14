@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D21BA07253725CA0025D0F0 /* UIImage+scaleX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */; };
 		3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A14232536B81F00E38B3E /* HeaderView.swift */; };
 		3D4A14282536B83F00E38B3E /* extensionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */; };
 		3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+scaleX.swift"; sourceTree = "<group>"; };
 		3D4A14232536B81F00E38B3E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionHeaderView.swift; sourceTree = "<group>"; };
 		3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderEncoder.swift; sourceTree = "<group>"; };
@@ -59,6 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D21BA04253725AF0025D0F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D21BA05253725BA0025D0F0 /* UIImage */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D21BA05253725BA0025D0F0 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		3D4A14222536B80700E38B3E /* HeaderMenuView */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +175,7 @@
 		FA1E0AAE246AC05000B0852D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3D21BA04253725AF0025D0F0 /* Extensions */,
 				3DD4072F252FA57700198269 /* API */,
 				3DD40717252F660500198269 /* Progress Indicators */,
 				FA1E0AAF246AC06A00B0852D /* DateCompStr.swift */,
@@ -241,6 +260,7 @@
 				3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */,
 				FA07A80C246BF61500D2830C /* PlacePreviewVC.swift in Sources */,
 				3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */,
+				3D21BA07253725CA0025D0F0 /* UIImage+scaleX.swift in Sources */,
 				FA07A80F246C160C00D2830C /* TablesContainerVC.swift in Sources */,
 				3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */,
 				3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */,
