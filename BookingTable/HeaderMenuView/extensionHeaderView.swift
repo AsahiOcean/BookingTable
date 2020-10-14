@@ -16,21 +16,6 @@ extension HeaderView {
         self.menuButton()
     }
     
-    func menuButton() {
-        let button = UIButton()
-        //button.setTitle("Menu", for: .normal)
-                        
-        let icon = UIImage(systemName: "line.horizontal.3", withConfiguration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(#colorLiteral(red: 0.8052493579, green: 0.5360926798, blue: 0, alpha: 1), renderingMode: .alwaysOriginal).scaleX(2)
-        
-        button.setImage(icon, for: .normal)
-                
-        button.layer.bounds.size = CGSize(width: self.bounds.height/2, height: self.bounds.height/2)
-                
-        button.center = CGPoint(x: self.bounds.width/10, y: self.bounds.height - (button.frame.height/1.25))
-        
-        self.addSubview(button)
-    }
-    
     internal func mainGradientBackground() {
         let gradientDispatch_background = DispatchQueue(label: "com.gradientDispatch.background", qos: .background)
         gradientDispatch_background.async {
