@@ -2,6 +2,7 @@ import UIKit
 
 public class HeaderView: UIView {
     
+    static let shared = HeaderView()
     internal var _frame: CGRect!
     
     public override init(frame: CGRect) {

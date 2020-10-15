@@ -8,6 +8,10 @@ class ViewController: UIViewController {
         OperationQueue.current?.addOperation({
             let headerView = HeaderView()
             self.view.addSubview(headerView)
+            OperationQueue.current?.addOperation({
+                let recentPlaces = RecentPlaces()
+                self.view.addSubview(recentPlaces)
+            })
         })
     }
 }
