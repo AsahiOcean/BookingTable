@@ -1,20 +1,6 @@
 import UIKit
 
 extension HeaderView {
-    internal func setupView() {
-        self._frame = self.frame
-        
-//        self.translatesAutoresizingMaskIntoConstraints = false
-//        self.setNeedsDisplay()
-//        self.setNeedsLayout()
-//        self.layoutIfNeeded()
-//        self.layer.masksToBounds = true
-        self.clipsToBounds = true // for cornerRadius
-        self.layer.cornerRadius = 5.0
-        
-        self.mainGradientBackground()
-        self.menuButton()
-    }
     
     internal func mainGradientBackground() {
         let gradientDispatch_background = DispatchQueue(label: "com.gradientDispatch.background", qos: .background)
@@ -38,5 +24,39 @@ extension HeaderView {
             gradient.add(animation, forKey: "gradient_animation")
             self.layer.addSublayer(gradient)
         }
+    }
+    
+    internal func menuButton() {
+        let button = UIButton()
+        //button.setTitle("Menu", for: .normal)
+        
+        let icon = UIImage(systemName: "line.horizontal.3", withConfiguration: UIImage.SymbolConfiguration(weight: .medium))?.withTintColor(#colorLiteral(red: 0.6633401113, green: 0.5, blue: 0, alpha: 1), renderingMode: .alwaysOriginal).scaleX(1.75)
+        
+        button.setImage(icon, for: .normal)
+                
+        button.layer.bounds.size = CGSize(
+            width: self.bounds.height/2,
+            height: self.bounds.height/2)
+                
+        button.center = CGPoint(
+            x: self.bounds.width/10,
+            y: self.bounds.height - (button.frame.height * 0.75))
+        
+        self.addSubview(button)
+    }
+    
+    internal func setupView() {
+        self._frame = self.frame
+        
+//        translatesAutoresizingMaskIntoConstraints = false
+//        setNeedsDisplay()
+//        setNeedsLayout()
+//        layoutIfNeeded()
+//        layer.masksToBounds = true
+        clipsToBounds = true // for cornerRadius
+        layer.cornerRadius = 5.0
+        
+        mainGradientBackground()
+        menuButton()
     }
 }
