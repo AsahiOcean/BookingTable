@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3D21BA07253725CA0025D0F0 /* UIImage+scaleX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */; };
-		3D21BA16253737D60025D0F0 /* Recent_places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21BA15253737D60025D0F0 /* Recent_places.swift */; };
+		3D21BA16253737D60025D0F0 /* RecentPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21BA15253737D60025D0F0 /* RecentPlaces.swift */; };
 		3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A14232536B81F00E38B3E /* HeaderView.swift */; };
-		3D4A14282536B83F00E38B3E /* extensionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */; };
 		3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */; };
+		3D6CFE262539C5A700E7C1C8 /* UIColor_brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CFE252539C5A600E7C1C8 /* UIColor_brightness.swift */; };
+		3D6CFE46253AC65000E7C1C8 /* HeaderViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CFE45253AC65000E7C1C8 /* HeaderViewButton.swift */; };
 		3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8E73F252EE57D0025FBAD /* ViewController.swift */; };
+		3DC2D7E5253AFC2200BC9F03 /* Array_revers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2D7E4253AFC2200BC9F03 /* Array_revers.swift */; };
 		3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40718252F666000198269 /* СircleСlockwise.swift */; };
 		3DD40732252FA5F000198269 /* Publicplaces.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4072C252FA57300198269 /* Publicplaces.json */; };
 		3DD40736252FA62400198269 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40735252FA62400198269 /* Loader.swift */; };
@@ -30,11 +32,13 @@
 
 /* Begin PBXFileReference section */
 		3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+scaleX.swift"; sourceTree = "<group>"; };
-		3D21BA15253737D60025D0F0 /* Recent_places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent_places.swift; sourceTree = "<group>"; };
+		3D21BA15253737D60025D0F0 /* RecentPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlaces.swift; sourceTree = "<group>"; };
 		3D4A14232536B81F00E38B3E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionHeaderView.swift; sourceTree = "<group>"; };
 		3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderEncoder.swift; sourceTree = "<group>"; };
+		3D6CFE252539C5A600E7C1C8 /* UIColor_brightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_brightness.swift; sourceTree = "<group>"; };
+		3D6CFE45253AC65000E7C1C8 /* HeaderViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewButton.swift; sourceTree = "<group>"; };
 		3DA8E73F252EE57D0025FBAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DC2D7E4253AFC2200BC9F03 /* Array_revers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array_revers.swift; sourceTree = "<group>"; };
 		3DD40718252F666000198269 /* СircleСlockwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СircleСlockwise.swift"; sourceTree = "<group>"; };
 		3DD4072C252FA57300198269 /* Publicplaces.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Publicplaces.json; sourceTree = "<group>"; };
 		3DD40735252FA62400198269 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		3D21BA04253725AF0025D0F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3DC2D7E3253AFC0A00BC9F03 /* Array */,
+				3D6CFE242539C58F00E7C1C8 /* UIColor */,
 				3D21BA05253725BA0025D0F0 /* UIImage */,
 			);
 			path = Extensions;
@@ -82,7 +88,8 @@
 		3D21BA14253737B10025D0F0 /* Recent places */ = {
 			isa = PBXGroup;
 			children = (
-				3D21BA15253737D60025D0F0 /* Recent_places.swift */,
+				3D21BA15253737D60025D0F0 /* RecentPlaces.swift */,
+				3D6CFE45253AC65000E7C1C8 /* HeaderViewButton.swift */,
 			);
 			path = "Recent places";
 			sourceTree = "<group>";
@@ -91,9 +98,24 @@
 			isa = PBXGroup;
 			children = (
 				3D4A14232536B81F00E38B3E /* HeaderView.swift */,
-				3D4A14272536B83F00E38B3E /* extensionHeaderView.swift */,
 			);
 			path = HeaderMenuView;
+			sourceTree = "<group>";
+		};
+		3D6CFE242539C58F00E7C1C8 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				3D6CFE252539C5A600E7C1C8 /* UIColor_brightness.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		3DC2D7E3253AFC0A00BC9F03 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				3DC2D7E4253AFC2200BC9F03 /* Array_revers.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 		3DD40713252F65BC00198269 /* LaunchScreen */ = {
@@ -270,13 +292,15 @@
 				FA1E0A9F246AA35900B0852D /* ViewController_OLD.swift in Sources */,
 				3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */,
 				FA07A80C246BF61500D2830C /* PlacePreviewVC.swift in Sources */,
+				3D6CFE262539C5A700E7C1C8 /* UIColor_brightness.swift in Sources */,
 				3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */,
 				3D21BA07253725CA0025D0F0 /* UIImage+scaleX.swift in Sources */,
-				3D21BA16253737D60025D0F0 /* Recent_places.swift in Sources */,
+				3D21BA16253737D60025D0F0 /* RecentPlaces.swift in Sources */,
 				FA07A80F246C160C00D2830C /* TablesContainerVC.swift in Sources */,
 				3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */,
 				3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */,
-				3D4A14282536B83F00E38B3E /* extensionHeaderView.swift in Sources */,
+				3D6CFE46253AC65000E7C1C8 /* HeaderViewButton.swift in Sources */,
+				3DC2D7E5253AFC2200BC9F03 /* Array_revers.swift in Sources */,
 				3DFC22592530B7E200105928 /* JsonDecoder.swift in Sources */,
 				FA1E0A9B246AA35900B0852D /* AppDelegate.swift in Sources */,
 				FA1E0A9D246AA35900B0852D /* SceneDelegate.swift in Sources */,
@@ -428,7 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = KXDT64LHVB;
 				INFOPLIST_FILE = BookingTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -450,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = KXDT64LHVB;
 				INFOPLIST_FILE = BookingTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

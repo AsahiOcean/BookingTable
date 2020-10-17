@@ -1,22 +1,51 @@
 import UIKit
 
-public class HeaderView: UIView {
+final class HeaderView: UIView {
+
+    var button: HeaderViewButton!
     
-    static let shared = HeaderView()
-    internal var _frame: CGRect!
-    
-    public override init(frame: CGRect) {
-        let X: CGFloat = frame.minX == .zero ? UIScreen.main.bounds.minX : frame.minX
-        let Y: CGFloat = frame.minY == .zero ? UIScreen.main.bounds.minY : frame.minY
-        let W: CGFloat = frame.width == .zero ? UIScreen.main.bounds.width : frame.width
-        let H: CGFloat = frame.height == .zero ? UIScreen.main.bounds.height / 10 : frame.height
+    public var gradientColors = [#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).cgColor, #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).cgColor]
         
-        super.init(frame: CGRect(x: X, y: Y, width: W, height: H))
-        self.setupView()
+    fileprivate func animationGradient(_ frame: CGRect) {
+        let gradient = CAGradientLayer()
+        gradient.colors = gradientColors
+        gradient.frame = frame
+        gradient.locations =  [-1.0, 2.0]
+        let animation = CABasicAnimation(keyPath: "colors")
+        animation.fromValue = gradientColors
+        animation.toValue = gradientColors.revers()
+        animation.duration = 3.0
+        animation.autoreverses = true
+        animation.repeatCount = .infinity
+        gradient.add(animation, forKey: nil)
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    fileprivate func setupView() {
+        layoutIfNeeded()
+        clipsToBounds = true // for cornerRadius
+        layer.cornerRadius = 5
+        layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+        animationGradient(frame)
+        
+        button = HeaderViewButton(frame: CGRect(
+                                    x: frame.width * 0.025,
+                                    y: frame.height * 0.25,
+                                    width: frame.height * 0.8,
+                                    height: frame.height * 0.8))
+        self.addSubview(button)
     }
         
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+        if aDecoder == .none {
+            fatalError("init(coder:) has not been implemented")
+        } else {
+            super.init(coder: aDecoder)
+        }
     }
 }
