@@ -2,9 +2,6 @@ import UIKit
 
 final class RecentPlaces: UIView {
     
-    private var stackView: UIStackView!
-    private let padding: CGFloat = 10.0
-
     private var cancelBtn: RecentPlacesButton!
     private var infoBtn: RecentPlacesButton!
     private var callBtn: RecentPlacesButton!
@@ -39,26 +36,34 @@ final class RecentPlaces: UIView {
         try? completion()
     }
     
-    fileprivate func buttonsPanel(frame: CGRect, _ completion: ([UIView]) throws -> Void) {
+    fileprivate func buttonsPanel() {
         
-        var views: [UIView] = []
-
-        cancelBtn = RecentPlacesButton(frame: frame)
-        cancelBtn.setIcon("multiply", #colorLiteral(red: 0.3238292336, green: 0.05678842217, blue: 0.1807048023, alpha: 1), scaleX: 0.5)
-        cancelBtn.gradientSetup(colors: [#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)], true)
-        views.append(cancelBtn)
+        let omg = (frame.height/frame.width) * (CGFloat.pi*CGFloat.pi)
         
-        infoBtn = RecentPlacesButton(frame: frame)
-        infoBtn.setIcon("info.circle", #colorLiteral(red: 0.1161215678, green: 0.2699673772, blue: 0.4141633809, alpha: 1), scaleX: 0.5)
+        infoBtn = RecentPlacesButton(frame: CGRect(
+                                        origin: .zero,
+                                        size: CGSize(
+                                            width: bounds.width/omg,
+                                            height: bounds.width/omg)))
         infoBtn.gradientSetup(colors: [#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1),#colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1)], true)
-        views.append(infoBtn)
+        infoBtn.setIcon("info.circle", #colorLiteral(red: 0.1161215678, green: 0.2699673772, blue: 0.4141633809, alpha: 1), scaleX: 0.5)
+        infoBtn.layer.frame.origin.y = self.bounds.midY - infoBtn.bounds.height / 2
+        infoBtn.layer.frame.origin.x = self.bounds.maxX - infoBtn.bounds.width * 1.25
+        self.addSubview(infoBtn)
         
-        callBtn = RecentPlacesButton(frame: frame)
-        callBtn.setIcon("phone.fill", #colorLiteral(red: 0.01972396486, green: 0.2767394185, blue: 0.1153987721, alpha: 1), scaleX: 0.5)
+        cancelBtn = RecentPlacesButton(frame: infoBtn.bounds)
+        cancelBtn.gradientSetup(colors: [#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)], true)
+        cancelBtn.setIcon("multiply", #colorLiteral(red: 0.3238292336, green: 0.05678842217, blue: 0.1807048023, alpha: 1), scaleX: 0.5)
+        cancelBtn.layer.frame.origin.y = infoBtn.frame.minY - cancelBtn.frame.height * 1.5
+        cancelBtn.layer.frame.origin.x = self.bounds.maxX - cancelBtn.bounds.width * 1.25
+        self.addSubview(cancelBtn)
+
+        callBtn = RecentPlacesButton(frame: cancelBtn.bounds)
         callBtn.gradientSetup(colors: [#colorLiteral(red: 0, green: 0.7012106776, blue: 0.1580332518, alpha: 1),#colorLiteral(red: 0.01960287802, green: 0.2767708302, blue: 0.1104094461, alpha: 1)], true)
-        views.append(callBtn)
-        
-        try? completion(views)
+        callBtn.setIcon("phone.fill", #colorLiteral(red: 0.01972396486, green: 0.2767394185, blue: 0.1153987721, alpha: 1), scaleX: 0.5)
+        callBtn.layer.frame.origin.y = infoBtn.frame.maxY + callBtn.frame.height/2
+        callBtn.layer.frame.origin.x = self.bounds.maxX - callBtn.bounds.width * 1.25
+        self.addSubview(callBtn)
     }
     
     override init(frame: CGRect) {
@@ -66,29 +71,7 @@ final class RecentPlaces: UIView {
         
         setupView(completion: {
             youBeenHereRecentlyLabels(label: "Label Label")
-                        
-            stackView = UIStackView()
-            stackView.axis = .vertical
-            
-            let z = ((self.frame.height/self.frame.width) * 10)
-            stackView.frame = CGRect(origin: .zero, size: CGSize(width: self.frame.width/z, height: self.frame.height)).offsetBy(dx: 0, dy: z*2)
-            stackView.spacing = z
-            
-            stackView.alignment = .fill
-            stackView.distribution = .fillEqually
-            
-            self.addSubview(stackView)
-            
-            let buttonFrame = CGRect(
-                origin: .zero,
-                size: CGSize(
-                    width: stackView.frame.width,
-                    height: stackView.frame.width))
-            buttonsPanel(frame: buttonFrame, { arrSubviews in
-                for view in arrSubviews {
-                    stackView.addArrangedSubview(view)
-                }
-            })
+            buttonsPanel()
         })
     }
     
