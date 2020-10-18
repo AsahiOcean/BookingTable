@@ -4,21 +4,30 @@ final class HeaderView: UIView {
 
     var button: HeaderViewButton!
     
-    public var gradientColors = [#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1).cgColor, #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).cgColor]
+    public var gradientColors = [#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)]
         
     fileprivate func animationGradient(_ frame: CGRect) {
-        let gradient = CAGradientLayer()
-        gradient.colors = gradientColors
-        gradient.frame = frame
-        gradient.locations =  [-1.0, 2.0]
-        let animation = CABasicAnimation(keyPath: "colors")
-        animation.fromValue = gradientColors
-        animation.toValue = gradientColors.revers()
-        animation.duration = 3.0
-        animation.autoreverses = true
-        animation.repeatCount = .infinity
-        gradient.add(animation, forKey: nil)
-        self.layer.insertSublayer(gradient, at: 0)
+        let animationGradient = DispatchQueue(label: "animationGradient", qos: .background)
+        
+        animationGradient.async {
+            var cgColors: [CGColor] = []
+            for color in self.gradientColors {
+                cgColors.append(color.cgColor)
+            }
+            
+            let gradient = CAGradientLayer()
+            gradient.colors = cgColors
+            gradient.frame = frame
+            gradient.locations =  [-1.0, 2.0]
+            let animation = CABasicAnimation(keyPath: "colors")
+            animation.fromValue = cgColors
+            animation.toValue = cgColors.revers()
+            animation.duration = 3.0
+            animation.autoreverses = true
+            animation.repeatCount = .infinity
+            gradient.add(animation, forKey: nil)
+            self.layer.insertSublayer(gradient, at: 0)
+        }
     }
     
     fileprivate func setupView() {

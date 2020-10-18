@@ -1,24 +1,21 @@
 import UIKit
 
 extension UIImage {
-    func scaleX(_ factor: CGFloat) -> UIImage {
-        
-        let scaledImageSize = CGSize(
-            width: size.width * factor,
-            height: size.height * factor
-        )
+    func scaleX(_ scaleX: CGFloat = 1.0) -> UIImage {
 
-        let renderer = UIGraphicsImageRenderer(
-            size: scaledImageSize
-        )
+        let scaledImageSize = CGSize(width: size.width * scaleX, height: size.height * scaleX)
+
+        let renderer = UIGraphicsImageRenderer(size: scaledImageSize)
 
         let scaledImage = renderer.image { _ in
             self.draw(in: CGRect(
                 origin: .zero,
-                size: scaledImageSize
+                size: CGSize(
+                    width: scaledImageSize.width,
+                    height: scaledImageSize.height
+                )
             ))
         }
-        
         return scaledImage
     }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D21BA07253725CA0025D0F0 /* UIImage+scaleX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */; };
 		3D21BA16253737D60025D0F0 /* RecentPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21BA15253737D60025D0F0 /* RecentPlaces.swift */; };
 		3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A14232536B81F00E38B3E /* HeaderView.swift */; };
 		3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */; };
@@ -15,6 +14,9 @@
 		3D6CFE46253AC65000E7C1C8 /* HeaderViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CFE45253AC65000E7C1C8 /* HeaderViewButton.swift */; };
 		3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8E73F252EE57D0025FBAD /* ViewController.swift */; };
 		3DC2D7E5253AFC2200BC9F03 /* Array_revers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2D7E4253AFC2200BC9F03 /* Array_revers.swift */; };
+		3DC2D7F2253B297C00BC9F03 /* extensionRecentPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2D7F1253B297C00BC9F03 /* extensionRecentPlaces.swift */; };
+		3DC2D7F7253B345900BC9F03 /* RecentPlacesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2D7F6253B345900BC9F03 /* RecentPlacesButton.swift */; };
+		3DC2D803253B5FF200BC9F03 /* UIImage+scaleX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC2D802253B5FF200BC9F03 /* UIImage+scaleX.swift */; };
 		3DD40719252F666000198269 /* СircleСlockwise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40718252F666000198269 /* СircleСlockwise.swift */; };
 		3DD40732252FA5F000198269 /* Publicplaces.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4072C252FA57300198269 /* Publicplaces.json */; };
 		3DD40736252FA62400198269 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD40735252FA62400198269 /* Loader.swift */; };
@@ -31,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+scaleX.swift"; sourceTree = "<group>"; };
 		3D21BA15253737D60025D0F0 /* RecentPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlaces.swift; sourceTree = "<group>"; };
 		3D4A14232536B81F00E38B3E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		3D4E0D94253480AA0057C7FE /* JSONDecoderEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderEncoder.swift; sourceTree = "<group>"; };
@@ -39,6 +40,9 @@
 		3D6CFE45253AC65000E7C1C8 /* HeaderViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewButton.swift; sourceTree = "<group>"; };
 		3DA8E73F252EE57D0025FBAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DC2D7E4253AFC2200BC9F03 /* Array_revers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array_revers.swift; sourceTree = "<group>"; };
+		3DC2D7F1253B297C00BC9F03 /* extensionRecentPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionRecentPlaces.swift; sourceTree = "<group>"; };
+		3DC2D7F6253B345900BC9F03 /* RecentPlacesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPlacesButton.swift; sourceTree = "<group>"; };
+		3DC2D802253B5FF200BC9F03 /* UIImage+scaleX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+scaleX.swift"; sourceTree = "<group>"; };
 		3DD40718252F666000198269 /* СircleСlockwise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СircleСlockwise.swift"; sourceTree = "<group>"; };
 		3DD4072C252FA57300198269 /* Publicplaces.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Publicplaces.json; sourceTree = "<group>"; };
 		3DD40735252FA62400198269 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -70,34 +74,28 @@
 		3D21BA04253725AF0025D0F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3DC2D801253B5FE400BC9F03 /* UIImage */,
 				3DC2D7E3253AFC0A00BC9F03 /* Array */,
 				3D6CFE242539C58F00E7C1C8 /* UIColor */,
-				3D21BA05253725BA0025D0F0 /* UIImage */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		3D21BA05253725BA0025D0F0 /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				3D21BA06253725CA0025D0F0 /* UIImage+scaleX.swift */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		3D21BA14253737B10025D0F0 /* Recent places */ = {
+		3D21BA14253737B10025D0F0 /* RecentPlaces */ = {
 			isa = PBXGroup;
 			children = (
 				3D21BA15253737D60025D0F0 /* RecentPlaces.swift */,
-				3D6CFE45253AC65000E7C1C8 /* HeaderViewButton.swift */,
+				3DC2D7F1253B297C00BC9F03 /* extensionRecentPlaces.swift */,
+				3DC2D7F6253B345900BC9F03 /* RecentPlacesButton.swift */,
 			);
-			path = "Recent places";
+			path = RecentPlaces;
 			sourceTree = "<group>";
 		};
 		3D4A14222536B80700E38B3E /* HeaderMenuView */ = {
 			isa = PBXGroup;
 			children = (
 				3D4A14232536B81F00E38B3E /* HeaderView.swift */,
+				3D6CFE45253AC65000E7C1C8 /* HeaderViewButton.swift */,
 			);
 			path = HeaderMenuView;
 			sourceTree = "<group>";
@@ -116,6 +114,14 @@
 				3DC2D7E4253AFC2200BC9F03 /* Array_revers.swift */,
 			);
 			path = Array;
+			sourceTree = "<group>";
+		};
+		3DC2D801253B5FE400BC9F03 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3DC2D802253B5FF200BC9F03 /* UIImage+scaleX.swift */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		3DD40713252F65BC00198269 /* LaunchScreen */ = {
@@ -189,7 +195,7 @@
 		FA1E0A99246AA35900B0852D /* BookingTable */ = {
 			isa = PBXGroup;
 			children = (
-				3D21BA14253737B10025D0F0 /* Recent places */,
+				3D21BA14253737B10025D0F0 /* RecentPlaces */,
 				3D4A14222536B80700E38B3E /* HeaderMenuView */,
 				3DD4071F252F688600198269 /* Storyboards */,
 				FA1E0AAE246AC05000B0852D /* Helpers */,
@@ -294,9 +300,10 @@
 				FA07A80C246BF61500D2830C /* PlacePreviewVC.swift in Sources */,
 				3D6CFE262539C5A700E7C1C8 /* UIColor_brightness.swift in Sources */,
 				3D4E0D95253480AA0057C7FE /* JSONDecoderEncoder.swift in Sources */,
-				3D21BA07253725CA0025D0F0 /* UIImage+scaleX.swift in Sources */,
 				3D21BA16253737D60025D0F0 /* RecentPlaces.swift in Sources */,
 				FA07A80F246C160C00D2830C /* TablesContainerVC.swift in Sources */,
+				3DC2D803253B5FF200BC9F03 /* UIImage+scaleX.swift in Sources */,
+				3DC2D7F7253B345900BC9F03 /* RecentPlacesButton.swift in Sources */,
 				3DA8E740252EE57D0025FBAD /* ViewController.swift in Sources */,
 				3D4A14242536B81F00E38B3E /* HeaderView.swift in Sources */,
 				3D6CFE46253AC65000E7C1C8 /* HeaderViewButton.swift in Sources */,
@@ -304,6 +311,7 @@
 				3DFC22592530B7E200105928 /* JsonDecoder.swift in Sources */,
 				FA1E0A9B246AA35900B0852D /* AppDelegate.swift in Sources */,
 				FA1E0A9D246AA35900B0852D /* SceneDelegate.swift in Sources */,
+				3DC2D7F2253B297C00BC9F03 /* extensionRecentPlaces.swift in Sources */,
 				3DD40736252FA62400198269 /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 46;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = KXDT64LHVB;
 				INFOPLIST_FILE = BookingTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -474,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 46;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = KXDT64LHVB;
 				INFOPLIST_FILE = BookingTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
