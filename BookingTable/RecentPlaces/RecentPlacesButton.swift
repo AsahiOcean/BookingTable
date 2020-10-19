@@ -3,7 +3,7 @@ import UIKit
 class RecentPlacesButton: UIButton {
 
     @objc private func animateDown(sender: UIButton) {
-        animate(sender, transform: CGAffineTransform.identity.scaledBy(x: 0.95, y: 0.95))
+        animate(sender, transform: CGAffineTransform.identity.scaledBy(x: 0.9, y: 0.9))
     }
     
     @objc private func animateUp(sender: UIButton) {
@@ -54,18 +54,16 @@ class RecentPlacesButton: UIButton {
     }
     
     func gradientSetup(colors: [UIColor], _ animated: Bool, dur: CFTimeInterval = 3.0) {
-        let cornerRadius = self.layer.cornerRadius
-        let selfFrame = self.bounds
-        
+
         var cgColors: [CGColor] = []
         for color in colors { cgColors.append(color.cgColor) }
 
         let gradient: CAGradientLayer = CAGradientLayer()
             gradient.colors = cgColors
-            gradient.cornerRadius = cornerRadius
+            gradient.cornerRadius = self.layer.cornerRadius
             gradient.startPoint = CGPoint(x: 0, y: 1)
             gradient.endPoint = CGPoint(x: 1, y: 0)
-            gradient.frame = selfFrame
+            gradient.frame = self.bounds
 
             if animated {
                 let animation = CABasicAnimation(keyPath: "colors")
@@ -74,7 +72,7 @@ class RecentPlacesButton: UIButton {
                 animation.duration = dur
                 animation.autoreverses = true
                 animation.repeatCount = .infinity
-                gradient.add(animation, forKey: "gradientSetup.gradient.animation")
+                gradient.add(animation, forKey: nil)
             }
         self.layer.insertSublayer(gradient, at: 0)
     }
