@@ -62,7 +62,10 @@ final class RecentPlaces: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        if frame == .zero {
+            self.layer.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width * 0.90, height: UIScreen.main.bounds.height * 0.30))
+        }
+                
         setupView(completion: {
             youBeenHereRecentlyLabels(label: "Label Label")
             buttonsPanel()

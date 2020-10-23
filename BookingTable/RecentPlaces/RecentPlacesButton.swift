@@ -4,6 +4,7 @@ class RecentPlacesButton: UIButton {
 
     @objc private func animateDown(sender: UIButton) {
         animate(sender, transform: CGAffineTransform.identity.scaledBy(x: 0.9, y: 0.9))
+        
     }
     
     @objc private func animateUp(sender: UIButton) {
@@ -40,7 +41,7 @@ class RecentPlacesButton: UIButton {
         iconView.isUserInteractionEnabled = false
         iconView.isExclusiveTouch = false
         iconView.clipsToBounds = true
-        iconView.layer.zPosition = self.layer.zPosition + 1
+        iconView.layer.zPosition = self.layer.zPosition
         if (UIImage(named: name) != nil) {
             iconView.image = UIImage(named: name)
         } else {
