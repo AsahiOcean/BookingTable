@@ -1,6 +1,5 @@
 import UIKit
 
-/// RecentPlaces Button
 class RPButton: UIButton {
     
     @objc private func animateDown(sender: UIButton) {
@@ -37,10 +36,10 @@ class RPButton: UIButton {
         addSubview(iconView)
     }
     
-    func gradientSetup(colors: [UIColor], _ animated: Bool, dur: CFTimeInterval = 3.0, _ completion: @escaping (RPButton) throws -> Void) {
+    func gradientSetup(_ uiColors: [UIColor], _ animated: Bool, dur: CFTimeInterval = 3.0) {
 
         var cgColors: [CGColor] = []
-        for color in colors { cgColors.append(color.cgColor) }
+        for color in uiColors { cgColors.append(color.cgColor) }
 
         let gradient: CAGradientLayer = CAGradientLayer()
             gradient.colors = cgColors
@@ -60,7 +59,6 @@ class RPButton: UIButton {
                 gradient.add(animation, forKey: nil)
             }
         self.layer.insertSublayer(gradient, at: 0)
-        try? completion(self)
     }
         
     fileprivate func setup() {

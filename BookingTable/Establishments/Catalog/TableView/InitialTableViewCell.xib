@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InitialTableViewCell" rowHeight="91" id="wVK-ZZ-OvW" customClass="InitialTableViewCell" customModule="BookingTable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wVK-ZZ-OvW" id="HWn-ny-Wab">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amD-Pz-ESE">
+                        <rect key="frame" x="20" y="20" width="43.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9l-Ac-Eah">
+                        <rect key="frame" x="20" y="40.5" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v9l-Ac-Eah" secondAttribute="trailing" constant="20" id="1EB-cK-TJO"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="v9l-Ac-Eah" secondAttribute="bottom" constant="20" id="BfS-2u-xqk"/>
+                    <constraint firstItem="v9l-Ac-Eah" firstAttribute="leading" secondItem="amD-Pz-ESE" secondAttribute="leading" id="Uvo-jL-sPl"/>
+                    <constraint firstItem="amD-Pz-ESE" firstAttribute="top" secondItem="HWn-ny-Wab" secondAttribute="top" constant="20" id="X15-cy-KHa"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="amD-Pz-ESE" secondAttribute="trailing" constant="20" id="dwX-kc-Tu6"/>
+                    <constraint firstItem="amD-Pz-ESE" firstAttribute="leading" secondItem="HWn-ny-Wab" secondAttribute="leading" constant="20" id="peH-e5-83q"/>
+                    <constraint firstItem="v9l-Ac-Eah" firstAttribute="top" secondItem="amD-Pz-ESE" secondAttribute="bottom" id="v8k-dp-hM8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="P1n-KY-uad"/>
+            <connections>
+                <outlet property="contentLabel" destination="v9l-Ac-Eah" id="aIu-oq-klB"/>
+                <outlet property="headerLabel" destination="amD-Pz-ESE" id="WK9-k0-NXC"/>
+            </connections>
+            <point key="canvasLocation" x="196" y="174.06296851574214"/>
+        </tableViewCell>
+    </objects>
+</document>
