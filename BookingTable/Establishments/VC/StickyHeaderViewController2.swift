@@ -1,10 +1,10 @@
 import UIKit
 
-var topViewInitialHeight : CGFloat = 200
+var topViewInitialHeight : CGFloat = 100
 
-let topViewFinalHeight : CGFloat = UIApplication.shared.statusBarFrame.size.height + 44 //navigation hieght
+let topViewFinalHeight : CGFloat = 0 //navigation hieght
 
-let topViewHeightConstraintRange = topViewFinalHeight..<topViewInitialHeight
+var topViewHeightConstraintRange = topViewFinalHeight..<topViewInitialHeight
 
 class StickyHeaderViewController2: UIViewController {
     
@@ -18,6 +18,18 @@ class StickyHeaderViewController2: UIViewController {
     @IBOutlet weak var tabBarCollectionView: UICollectionView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBAction func closeBanner(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.topBarHeight(0)
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    private func topBarHeight(_ value: CGFloat) {
+        headerViewHeightConstraint.constant = value
+        topViewInitialHeight = headerViewHeightConstraint.constant
+    }
     
     //MARK:- Programatic UI Properties
 
@@ -33,6 +45,13 @@ class StickyHeaderViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        topBarHeight(view.frame.height/10)
+        
+        bottomView.layer.cornerRadius = 15
+        bottomView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        headerViewHeightConstraint.constant = topViewInitialHeight
+        
         setupCollectionView()
         setupPagingViewController()
         populateBottomView()
@@ -42,7 +61,6 @@ class StickyHeaderViewController2: UIViewController {
     //MARK: View Setup
     
     func setupCollectionView() {
-        
         let layout = tabBarCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.estimatedItemSize = CGSize(width: 100, height: 50)
         
@@ -56,22 +74,19 @@ class StickyHeaderViewController2: UIViewController {
     
     func setupSelectedTabView() {
         
-        let label = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 10, height: 10))
+        let label = UILabel(frame: CGRect.init(x: 0, y: 0, width: 10, height: 10))
         label.text = "TAB \(1)"
         label.sizeToFit()
         var width = label.intrinsicContentSize.width
         width = width + 40
         
         selectedTabView.frame = CGRect(x: 20, y: 55, width: width, height: 5)
-        selectedTabView.backgroundColor = UIColor(red:0.65, green:0.58, blue:0.94, alpha:1)
+        selectedTabView.backgroundColor = #colorLiteral(red: 0.8300367594, green: 0.711122334, blue: 0.5887681246, alpha: 1)
         tabBarCollectionView.addSubview(selectedTabView)
     }
     
     func setupPagingViewController() {
-        
-        pageViewController = UIPageViewController(transitionStyle: .scroll,
-                                                      navigationOrientation: .horizontal,
-                                                      options: nil)
+        pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         pageViewController.dataSource = self
         pageViewController.delegate = self
     }
@@ -316,15 +331,11 @@ extension StickyHeaderViewController2: InnerTableViewScrollDelegate {
        
         headerViewHeightConstraint.constant -= scrollDistance
         
-        /* Don't restrict the downward scroll.
- 
         if headerViewHeightConstraint.constant > topViewInitialHeight {
 
             headerViewHeightConstraint.constant = topViewInitialHeight
         }
-         
-        */
-        
+
         if headerViewHeightConstraint.constant < topViewFinalHeight {
             
             headerViewHeightConstraint.constant = topViewFinalHeight
