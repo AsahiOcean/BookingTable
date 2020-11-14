@@ -189,18 +189,6 @@ class StickyHeaderViewController2: UIViewController {
                                                   animated: true,
                                                   completion: nil)
     }
-    
-    func scrollSelectedTabView(toIndexPath indexPath: IndexPath, shouldAnimate: Bool = true) {
-        
-        UIView.animate(withDuration: 0.3) {
-            
-            if let cell = self.tabBarCollectionView.cellForItem(at: indexPath) {
-                
-                self.selectedTabView.frame.size.width = cell.frame.width
-                self.selectedTabView.frame.origin.x = cell.frame.origin.x
-            }
-        }
-    }
 }
 
 //MARK:- Collection View Data Source
@@ -251,9 +239,7 @@ extension StickyHeaderViewController2: UICollectionViewDelegateFlowLayout {
         tabBarCollectionView.scrollToItem(at: indexPath,
                                           at: .centeredHorizontally,
                                           animated: true)
-        
-        scrollSelectedTabView(toIndexPath: indexPath)
-        
+                
         setBottomPagingView(toPageWithAtIndex: indexPath.item, andNavigationDirection: direction)
     }
     
@@ -311,7 +297,6 @@ extension StickyHeaderViewController2: UIPageViewControllerDelegate {
         
         let indexPathAtCollectionView = IndexPath(item: currentVCIndex, section: 0)
         
-        scrollSelectedTabView(toIndexPath: indexPathAtCollectionView)
         tabBarCollectionView.scrollToItem(at: indexPathAtCollectionView,
                                           at: .centeredHorizontally,
                                           animated: true)
