@@ -1,7 +1,7 @@
 import UIKit
 
 class RecentPlaces: UIView {
-        
+    
     fileprivate(set) var cancel: RPButton!
     fileprivate(set) var info: RPButton!
     fileprivate(set) var call: RPButton!
@@ -12,7 +12,7 @@ class RecentPlaces: UIView {
         print(text)
         estLabel.text = text
     }
-         
+    
     //MARK: -- Labels
     private func labelsSetup() {
         header.font = defaultFont()
@@ -22,7 +22,7 @@ class RecentPlaces: UIView {
                               y: cancel.frame.minY,
                               width: cancel.frame.minX,
                               height: header.font.pointSize)
-                              .insetBy(dx: cancel.frame.minY, dy: 0)
+            .insetBy(dx: cancel.frame.minY, dy: 0)
         header.text = "Вы были здесь недавно"
         addSubview(header)
         
@@ -34,13 +34,13 @@ class RecentPlaces: UIView {
                                      height: estLabel.font.pointSize)
         addSubview(estLabel)
     }
-
+    
     //MARK: -- Buttons
     fileprivate func buttonsPanel() {
         cancel = RPButton(frame: CGRect(origin: .zero,
                                         size: CGSize(
-                                        width: bounds.size.height/4,
-                                        height: bounds.size.height/4)))
+                                            width: bounds.size.height/4,
+                                            height: bounds.size.height/4)))
         cancel.gradientSetup([#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)], true)
         cancel.setIcon("multiply", #colorLiteral(red: 0.3238292336, green: 0.05678842217, blue: 0.1807048023, alpha: 1))
         cancel.frame.origin.x = frame.maxX - cancel.bounds.width*1.1
@@ -69,16 +69,16 @@ class RecentPlaces: UIView {
         clipsToBounds = true
         layer.cornerRadius = 12
         layer.borderWidth = 2; layer.borderColor = #colorLiteral(red: 0.5741485357, green: 0.5741624236, blue: 0.574154973, alpha: 1)
-                layer.backgroundColor = #colorLiteral(red: 0.2873916626, green: 0.3154491484, blue: 0.414301753, alpha: 1)
+        layer.backgroundColor = #colorLiteral(red: 0.2873916626, green: 0.3154491484, blue: 0.414301753, alpha: 1)
         buttonsPanel() // 1
         labelsSetup() // 2
     }
-        
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
     }
-            
+    
     internal required init?(coder aDecoder: NSCoder) {
         if aDecoder == .none {
             fatalError("init(coder:) has not been implemented")

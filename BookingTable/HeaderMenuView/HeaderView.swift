@@ -1,7 +1,7 @@
 import UIKit
 
 final class HeaderView: UIView {
-
+    
     private var gradient: CAGradientLayer = CAGradientLayer()
     private var button: HeaderViewButton!
     
@@ -61,7 +61,7 @@ final class HeaderView: UIView {
         super.init(frame: frame)
         setupView()
     }
-        
+    
     required init?(coder aDecoder: NSCoder) {
         if aDecoder == .none {
             fatalError("init(coder:) has not been implemented")

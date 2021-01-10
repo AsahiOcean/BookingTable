@@ -1,5 +1,5 @@
 import Foundation
 
 extension Array {
-    func revers() -> Array { self.reversed() }
+    public func revers() -> Array { self.reversed() }
 }
