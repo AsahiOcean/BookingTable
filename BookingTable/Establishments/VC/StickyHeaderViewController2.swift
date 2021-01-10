@@ -32,7 +32,7 @@ class StickyHeaderViewController2: UIViewController {
     }
     
     //MARK:- Programatic UI Properties
-
+    
     var pageViewController = UIPageViewController()
     var selectedTabView = UIView()
     
@@ -107,9 +107,9 @@ class StickyHeaderViewController2: UIViewController {
         let initialPage = 0
         
         pageViewController.setViewControllers([pageCollection.pages[initialPage].vc],
-                                                  direction: .forward,
-                                                  animated: true,
-                                                  completion: nil)
+                                              direction: .forward,
+                                              animated: true,
+                                              completion: nil)
         
         
         addChild(pageViewController)
@@ -129,7 +129,7 @@ class StickyHeaderViewController2: UIViewController {
         pageViewController.view.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
         pageViewController.view.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor).isActive = true
     }
-
+    
     func addPanGestureToTopViewAndCollectionView() {
         
         let topViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(topViewMoved))
@@ -139,12 +139,12 @@ class StickyHeaderViewController2: UIViewController {
         
         /* Adding pan gesture to collection view is overriding the collection view scroll.
          
-        let collViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(topViewMoved))
-        
-        tabBarCollectionView.isUserInteractionEnabled = true
-        tabBarCollectionView.addGestureRecognizer(collViewPanGesture)
+         let collViewPanGesture = UIPanGestureRecognizer(target: self, action: #selector(topViewMoved))
          
-        */
+         tabBarCollectionView.isUserInteractionEnabled = true
+         tabBarCollectionView.addGestureRecognizer(collViewPanGesture)
+         
+         */
     }
     
     //MARK:- Action Methods
@@ -157,7 +157,7 @@ class StickyHeaderViewController2: UIViewController {
         var dragYDiff : CGFloat
         
         switch gesture.state {
-            
+        
         case .began:
             
             dragInitialY = gesture.location(in: self.view).y
@@ -176,7 +176,7 @@ class StickyHeaderViewController2: UIViewController {
             innerTableViewScrollEnded(withScrollDirection: dragDirection)
             
         default: return
-        
+            
         }
     }
     
@@ -185,21 +185,9 @@ class StickyHeaderViewController2: UIViewController {
     func setBottomPagingView(toPageWithAtIndex index: Int, andNavigationDirection navigationDirection: UIPageViewController.NavigationDirection) {
         
         pageViewController.setViewControllers([pageCollection.pages[index].vc],
-                                                  direction: navigationDirection,
-                                                  animated: true,
-                                                  completion: nil)
-    }
-    
-    func scrollSelectedTabView(toIndexPath indexPath: IndexPath, shouldAnimate: Bool = true) {
-        
-        UIView.animate(withDuration: 0.3) {
-            
-            if let cell = self.tabBarCollectionView.cellForItem(at: indexPath) {
-                
-                self.selectedTabView.frame.size.width = cell.frame.width
-                self.selectedTabView.frame.origin.x = cell.frame.origin.x
-            }
-        }
+                                              direction: navigationDirection,
+                                              animated: true,
+                                              completion: nil)
     }
 }
 
@@ -251,8 +239,6 @@ extension StickyHeaderViewController2: UICollectionViewDelegateFlowLayout {
         tabBarCollectionView.scrollToItem(at: indexPath,
                                           at: .centeredHorizontally,
                                           animated: true)
-        
-        scrollSelectedTabView(toIndexPath: indexPath)
         
         setBottomPagingView(toPageWithAtIndex: indexPath.item, andNavigationDirection: direction)
     }
@@ -311,7 +297,6 @@ extension StickyHeaderViewController2: UIPageViewControllerDelegate {
         
         let indexPathAtCollectionView = IndexPath(item: currentVCIndex, section: 0)
         
-        scrollSelectedTabView(toIndexPath: indexPathAtCollectionView)
         tabBarCollectionView.scrollToItem(at: indexPathAtCollectionView,
                                           at: .centeredHorizontally,
                                           animated: true)
@@ -328,14 +313,14 @@ extension StickyHeaderViewController2: InnerTableViewScrollDelegate {
     }
     
     func innerTableViewDidScroll(withDistance scrollDistance: CGFloat) {
-       
+        
         headerViewHeightConstraint.constant -= scrollDistance
         
         if headerViewHeightConstraint.constant > topViewInitialHeight {
-
+            
             headerViewHeightConstraint.constant = topViewInitialHeight
         }
-
+        
         if headerViewHeightConstraint.constant < topViewFinalHeight {
             
             headerViewHeightConstraint.constant = topViewFinalHeight
@@ -349,10 +334,10 @@ extension StickyHeaderViewController2: InnerTableViewScrollDelegate {
         /*
          *  Scroll is not restricted.
          *  So this check might cause the view to get stuck in the header height is greater than initial height.
- 
-        if topViewHeight >= topViewInitialHeight || topViewHeight <= topViewFinalHeight { return }
          
-        */
+         if topViewHeight >= topViewInitialHeight || topViewHeight <= topViewFinalHeight { return }
+         
+         */
         
         if topViewHeight <= topViewFinalHeight + 20 {
             
@@ -361,10 +346,10 @@ extension StickyHeaderViewController2: InnerTableViewScrollDelegate {
         } else if topViewHeight <= topViewInitialHeight - 20 {
             
             switch scrollDirection {
-                
+            
             case .Down: scrollToInitialView()
             case .Up: scrollToFinalView()
-            
+                
             }
             
         } else {
