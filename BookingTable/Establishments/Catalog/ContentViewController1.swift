@@ -1,7 +1,6 @@
 import UIKit
 
-enum DragDirection {
-    
+enum DragDirection: CaseIterable {
     case Up
     case Down
 }
@@ -16,39 +15,25 @@ protocol InnerTableViewScrollDelegate: class {
 
 class ContentViewController1: UIViewController {
     
-    //MARK:- Outlets
-    
+    //MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK:- Scroll Delegate
-    
+    //MARK: Scroll Delegate
     weak var innerTableViewScrollDelegate: InnerTableViewScrollDelegate?
     
-    //MARK:- Stored Properties for Scroll Delegate
-    
+    //MARK: Stored Properties for Scroll Delegate
     private var dragDirection: DragDirection = .Up
-    private var oldContentOffset = CGPoint.zero
+    private var oldContentOffset: CGPoint = .zero
     
-    //MARK:- Data Source
-    
+    //MARK: Data Source
     var numberOfCells: Int = 0
     
-    //MARK:- View Life Cycle
-    
+    //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupTableView()
-    }
-    
-    //MARK:- View Setup
-    
-    func setupTableView() {
-        
-        tableView.register(UINib(nibName: TabTableViewCellID, bundle: nil),
-                           forCellReuseIdentifier: TabTableViewCellID)
-        tableView.dataSource = self
         tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TabTableViewCell.nib, forCellReuseIdentifier: TabTableViewCell.id)
         tableView.estimatedRowHeight = 44
     }
 }
@@ -57,21 +42,14 @@ class ContentViewController1: UIViewController {
 //MARK:- Table View Data Source
 
 extension ContentViewController1: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return numberOfCells
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: TabTableViewCellID) as? TabTableViewCell {
-            
-            cell.cellLabel.text = "This is cell \(indexPath.row + 1)"
-            return cell
-        }
-        
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: TabTableViewCell.id) as! TabTableViewCell
+        cell.cellLabel.text = "This is cell \(indexPath.row + 1)"
+        return cell
     }
 }
 
@@ -95,8 +73,8 @@ extension ContentViewController1: UITableViewDelegate {
              */
             
             if delta > 0,
-                topViewUnwrappedHeight > topViewHeightConstraintRange.lowerBound,
-                scrollView.contentOffset.y > 0 {
+               topViewUnwrappedHeight > topViewHeightConstraintRange.lowerBound,
+               scrollView.contentOffset.y > 0 {
                 
                 dragDirection = .Up
                 innerTableViewScrollDelegate?.innerTableViewDidScroll(withDistance: delta)
@@ -111,8 +89,8 @@ extension ContentViewController1: UITableViewDelegate {
              */
             
             if delta < 0,
-                // topViewUnwrappedHeight < topViewHeightConstraintRange.upperBound,
-                scrollView.contentOffset.y < 0 {
+               // topViewUnwrappedHeight < topViewHeightConstraintRange.upperBound,
+               scrollView.contentOffset.y < 0 {
                 
                 dragDirection = .Down
                 innerTableViewScrollDelegate?.innerTableViewDidScroll(withDistance: delta)
