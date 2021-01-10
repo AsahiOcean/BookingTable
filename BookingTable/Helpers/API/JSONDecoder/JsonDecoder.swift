@@ -39,7 +39,7 @@ public struct Establishments: Codable, Identifiable {
     var description: String?
     var eatingEst: [EatingEsts]?
     var leisureEst: [LeisureEsts]?
-        
+    
     init(_id: Int?, _description: String?, _eatingEst: [EatingEsts]?, _leisureEst: [LeisureEsts]?) {
         self.id = _id ?? Int(Date().timeIntervalSince1970)
         self.description = _description
@@ -67,7 +67,7 @@ struct EatingEst: Codable {
     let eatingEstablishmentsDescription: String?
     let foodMarkets: FoodMarkets?
     let coffeeHouses: CoffeeHouses?
-
+    
     enum CodingKeys: String, CodingKey {
         case eatingEstablishmentsDescription = "description"
         case foodMarkets = "Food Markets"
@@ -79,7 +79,7 @@ struct EatingEst: Codable {
 struct CoffeeHouses: Codable {
     let coffeeHousesDescription: String?
     let coffeeHouse1, coffeeHouse2, coffeeHouse3: [AboutEst]?
-
+    
     enum CodingKeys: String, CodingKey {
         case coffeeHousesDescription = "description"
         case coffeeHouse1 = "Coffee house"
@@ -96,7 +96,7 @@ struct AboutEst: Codable {
     let address: String?
     let onlyAdults, foodCourt: Bool?
     let workingDays: [WorkingDay]?
-
+    
     enum CodingKeys: String, CodingKey {
         case title = "Title"
         case subtitle = "Subtitle"
@@ -115,7 +115,7 @@ struct Image: Codable {
     let logo: String?
     let image1, image2, image3, image4: String?
     let image5: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case logo = "Logo"
         case image1 = "Image-1"
@@ -132,7 +132,7 @@ struct WayOfCommunication: Codable {
     let mobilePhone: MobilePhone?
     let telegram: Bool?
     let urLs: [URLElement]?
-
+    
     enum CodingKeys: String, CodingKey {
         case workPhone = "Work phone"
         case mobilePhone = "Mobile phone"
@@ -148,7 +148,7 @@ enum MobilePhone: String, Codable {
 // MARK: - URLElement
 struct URLElement: Codable {
     let site: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case site = "Site"
     }
@@ -162,7 +162,7 @@ enum WorkPhone: String, Codable {
 struct WorkingDay: Codable {
     let monday, tuesday, wednesday, thursday: [Day]?
     let friday, saturday, sunday: [Day]?
-
+    
     enum CodingKeys: String, CodingKey {
         case monday = "Monday"
         case tuesday = "Tuesday"
@@ -179,7 +179,7 @@ struct Day: Codable {
     let dayOff: Bool?
     let openingTime: OpeningTime?
     let closingTime: ClosingTime?
-
+    
     enum CodingKeys: String, CodingKey {
         case dayOff = "Day-off"
         case openingTime = "Opening time"
@@ -206,7 +206,7 @@ enum OpeningTime: String, Codable {
 struct FoodMarkets: Codable {
     let foodMarketsDescription: String?
     let foodMarket1, foodMarket2, foodMarket3: [AboutEst]?
-
+    
     enum CodingKeys: String, CodingKey {
         case foodMarketsDescription = "description"
         case foodMarket1 = "Food Market 1"
@@ -220,7 +220,7 @@ struct LeisureEst: Codable {
     let leisureEstablishmentsDescription: String?
     let hookahPlaces: HookahPlaces?
     let nightClubs: NightClubs?
-
+    
     enum CodingKeys: String, CodingKey {
         case leisureEstablishmentsDescription = "description"
         case hookahPlaces = "Hookah Places"
@@ -232,7 +232,7 @@ struct LeisureEst: Codable {
 struct HookahPlaces: Codable {
     let hookahPlacesDescription: String?
     let hookahPlace1, hookahPlace2, hookahPlace3: [AboutEst]?
-
+    
     enum CodingKeys: String, CodingKey {
         case hookahPlacesDescription = "description"
         case hookahPlace1 = "Hookah Place 1"
@@ -245,7 +245,7 @@ struct HookahPlaces: Codable {
 struct NightClubs: Codable {
     let nightClubsDescription: String?
     let nightClub1, nightClub2, nightClub3: [AboutEst]?
-
+    
     enum CodingKeys: String, CodingKey {
         case nightClubsDescription = "description"
         case nightClub1 = "Night club 1"

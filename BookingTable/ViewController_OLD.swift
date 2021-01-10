@@ -17,8 +17,8 @@ class ViewController_OLD: UIViewController {
     @IBAction func ChooseTable(_ sender: Any) {
         if SwitchСondition.isOn {
             UIView.animate(withDuration: 0.5) {
-//                self.PlacePreview.alpha = 0
-//                self.BookingStack.alpha = 1
+                //                self.PlacePreview.alpha = 0
+                //                self.BookingStack.alpha = 1
             }
         } else {
             UIView.animate(withDuration: 0.5) {
@@ -27,7 +27,7 @@ class ViewController_OLD: UIViewController {
             }
         }
     }
-
+    
     let counters = ["1","2","3","4","5","6"]
     
     var bookingTime = String()
