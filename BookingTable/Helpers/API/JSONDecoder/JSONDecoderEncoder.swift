@@ -14,7 +14,7 @@ final class JSONDecoderEncoder: JSON_Data_Delegate {
         decoder.dateDecodingStrategy = .iso8601
         return decoder
     }()
-
+    
     lazy var encoder: JSONEncoder = {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
@@ -27,21 +27,21 @@ final class JSONDecoderEncoder: JSON_Data_Delegate {
             print(testEst as Any)
         }
     }
-        
+    
     fileprivate func keyValueSwitch<T>(_ key: String, _ value: T) {
         switch (key,value) {
-            case (let key, let value_Int as Int):
-                print("\(key): \(value_Int)")
-            case (let key, let value_Double as Double):
-                print("\(key): \(value_Double)")
-            case (let key, let value_String as String):
-                print("\(key): \(value_String)")
-            case (let key, let value_Bool as Bool):
-                print("\(key): \(value_Bool)")
-            case (let key, let value_Dict as Dictionary<String, AnyObject>):
-                print("\(key): \(value_Dict.keys)")
-            case (let key, let value as AnyObject):
-                print("\(key): \(type(of: value))")
+        case (let key, let value_Int as Int):
+            print("\(key): \(value_Int)")
+        case (let key, let value_Double as Double):
+            print("\(key): \(value_Double)")
+        case (let key, let value_String as String):
+            print("\(key): \(value_String)")
+        case (let key, let value_Bool as Bool):
+            print("\(key): \(value_Bool)")
+        case (let key, let value_Dict as Dictionary<String, AnyObject>):
+            print("\(key): \(value_Dict.keys)")
+        case (let key, let value as AnyObject):
+            print("\(key): \(type(of: value))")
         default:
             print("[🔴] switch (key,value): Unknown format")
         }
