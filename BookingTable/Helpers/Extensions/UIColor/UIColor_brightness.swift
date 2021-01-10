@@ -10,7 +10,6 @@ public extension UIColor {
             
             return UIColor(hue: H, saturation: S, brightness: B, alpha: A)
         }
-        
         return self
     }
 }
