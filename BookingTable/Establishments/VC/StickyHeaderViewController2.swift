@@ -1,8 +1,8 @@
 import UIKit
 
-var topViewInitialHeight : CGFloat = 100
+var topViewInitialHeight: CGFloat = 100
 
-let topViewFinalHeight : CGFloat = 0 //navigation hieght
+let topViewFinalHeight: CGFloat = 0 //navigation hieght
 
 var topViewHeightConstraintRange = topViewFinalHeight..<topViewInitialHeight
 
@@ -61,11 +61,10 @@ class StickyHeaderViewController2: UIViewController {
     //MARK: View Setup
     
     func setupCollectionView() {
-        let layout = tabBarCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
-        layout?.estimatedItemSize = CGSize(width: 100, height: 50)
+        guard let layout = tabBarCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        layout.estimatedItemSize = CGSize(width: 100, height: 50)
         
-        tabBarCollectionView.register(UINib(nibName: TabBarCollectionViewCellID, bundle: nil),
-                                      forCellWithReuseIdentifier: TabBarCollectionViewCellID)
+        tabBarCollectionView.register(TabBarCollectionViewCell.nib, forCellWithReuseIdentifier: TabBarCollectionViewCell.id)
         tabBarCollectionView.dataSource = self
         tabBarCollectionView.delegate = self
         
@@ -194,21 +193,14 @@ class StickyHeaderViewController2: UIViewController {
 //MARK:- Collection View Data Source
 
 extension StickyHeaderViewController2: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return pageCollection.pages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if let tabCell = collectionView.dequeueReusableCell(withReuseIdentifier: TabBarCollectionViewCellID, for: indexPath) as? TabBarCollectionViewCell {
-            
-            tabCell.tabNameLabel.text = pageCollection.pages[indexPath.row].name
-            return tabCell
-        }
-        
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabBarCollectionViewCell.id, for: indexPath) as! TabBarCollectionViewCell
+        cell.tabNameLabel.text = pageCollection.pages[indexPath.row].name
+        return cell
     }
 }
 
@@ -226,25 +218,17 @@ extension StickyHeaderViewController2: UICollectionViewDelegateFlowLayout {
         var direction: UIPageViewController.NavigationDirection
         
         if indexPath.item > pageCollection.selectedPageIndex {
-            
             direction = .forward
-            
         } else {
-            
             direction = .reverse
         }
         
         pageCollection.selectedPageIndex = indexPath.item
-        
-        tabBarCollectionView.scrollToItem(at: indexPath,
-                                          at: .centeredHorizontally,
-                                          animated: true)
-        
+        tabBarCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         setBottomPagingView(toPageWithAtIndex: indexPath.item, andNavigationDirection: direction)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
 }
